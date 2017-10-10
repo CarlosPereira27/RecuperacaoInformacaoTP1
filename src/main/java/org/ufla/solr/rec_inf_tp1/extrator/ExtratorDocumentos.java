@@ -27,6 +27,7 @@ public class ExtratorDocumentos extends ExtratorGenerico {
 	 * Inicializa as configurações do extrator de documentos da base de dados.
 	 */
 	public ExtratorDocumentos() {
+		System.out.println("Iniciando extração dos documentos!");
 		indiceArquivoAtual = 0;
 		setArquivo(ConfigBaseDeDados.getArquivoDocumento(indiceArquivoAtual));
 	}

@@ -72,7 +72,7 @@ public class PovoarColecao {
 
 	public static void main(String args[]) throws Exception {
 		// Preparando o cliente Solr
-		SolrClient solr = ConfigSolrClient.getSolrClient();
+		SolrClient solr = ConfigSolrClient.getSolrClientCollection();
 
 		deletaBaseDeDados(solr);
 

@@ -33,6 +33,10 @@ public abstract class ExtratorGenerico {
 	 * Última linha que foi lida do arquivo atual.
 	 */
 	protected String linhaAtual;
+	/**
+	 * Número da linha atual
+	 */
+	protected int numLinhaAtual = 0;
 
 	/**
 	 * Caractere especial que está contido em alguns arquivos da base de dados
@@ -53,6 +57,7 @@ public abstract class ExtratorGenerico {
 	protected void leLinha() {
 		try {
 			linhaAtual = br.readLine();
+			numLinhaAtual++;
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e.getMessage());
@@ -96,8 +101,9 @@ public abstract class ExtratorGenerico {
 		this.arquivo = arquivo;
 		try {
 			br = new BufferedReader(new FileReader(this.arquivo));
-			linhaAtual = br.readLine();
+			leLinha();
 		} catch (Exception e) {
+			System.out.println("Arquivo não existe!");
 			e.printStackTrace();
 			throw new RuntimeException(e.getMessage());
 		}
@@ -143,9 +149,9 @@ public abstract class ExtratorGenerico {
 
 		final MetaAtributo CONT_ATRIBUTO = getContAtributo();
 		final Class<MetaAtr> metaAtributoClass = getMetaAtributoClass();
-
 		MetaAtributo atributo = MetaAtributo.getAtributo(linhaAtual, metaAtributoClass);
-		StringBuilder valor = new StringBuilder(linhaAtual.substring(2).trim());
+		int n = atributo.getNome().length();
+		StringBuilder valor = new StringBuilder(linhaAtual.substring(n).trim());
 		leLinha();
 		while (CONT_ATRIBUTO.equals(MetaAtributo.getAtributo(linhaAtual, metaAtributoClass))) {
 			valor.append(atributo.getCaracterSeparador()).append(linhaAtual.trim());

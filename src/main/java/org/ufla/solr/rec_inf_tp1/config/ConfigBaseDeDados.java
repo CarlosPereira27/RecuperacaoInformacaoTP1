@@ -17,7 +17,7 @@ public abstract class ConfigBaseDeDados {
 	 * Define o caminho dos arquivos com a base de dados dentro da máquina em
 	 * que está rodando o projeto.
 	 */
-	private static String caminhoAbsolutoCFC = "/home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc/";
+	private static String caminhoAbsolutoCFC = "/home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc";
 
 	/**
 	 * Define o array com os nomes dos arquivos da base de dados de documentos.
@@ -36,17 +36,17 @@ public abstract class ConfigBaseDeDados {
 		if (indice < 0 || indice >= ARQUIVOS_DOCUMENTOS.length) {
 			return null;
 		}
-		return new File(caminhoAbsolutoCFC + ARQUIVOS_DOCUMENTOS[indice]);
+		return new File(caminhoAbsolutoCFC + File.separator + ARQUIVOS_DOCUMENTOS[indice]);
 	}
 
 	public static void setCaminhoAbslutoCFC(String caminhoAbsolutoCFC) {
 		ConfigBaseDeDados.caminhoAbsolutoCFC = caminhoAbsolutoCFC;
-		arquivoConsulta = new File(caminhoAbsolutoCFC + "cfquery");
+		arquivoConsulta = new File(caminhoAbsolutoCFC + File.separator + "cfquery");
 	}
 
 	/**
 	 * Arquivo da base de dados de consultas.
 	 */
-	public static File arquivoConsulta = new File(caminhoAbsolutoCFC + "cfquery");
+	public static File arquivoConsulta = new File(caminhoAbsolutoCFC + File.separator + "cfquery");
 
 }

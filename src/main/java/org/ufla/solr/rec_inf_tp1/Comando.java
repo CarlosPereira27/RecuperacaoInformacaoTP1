@@ -10,7 +10,9 @@ package org.ufla.solr.rec_inf_tp1;
  */
 public enum Comando {
 
-	POVOAR_COLECAO("povoarColecao"), CONSULTAS_E_RELATORIO("consultasERelatorio");
+	POVOAR_COLECAO("povoarColecao"), 
+	CONSULTAS_E_RELATORIO("consultasERelatorio"), 
+	CRIAR_COLECAO("criarColecao");
 
 	/**
 	 * Nome do comando.

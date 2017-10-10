@@ -1,0 +1,27 @@
+# O caractere '#' no ínicio da linha indica comentário.
+# 
+# Para definir as configurações neste arquivo coloque o nome da configuração, o caractere de atribuição ('=', o caracter de quebra de tokens) e o valor da configuração.
+# Da mesma forma que está nos exemplos abaixo com valores padrões.
+#
+# IMPORTANTE - se uma configuração definida neste arquivo também for passada por parâmetro na execução.
+# A configuração passada por parâmetro sobrescreve o valor da configuração definida neste arquivo.
+# 
+# -cmd <arg> -> comando a ser realizado (obrigatório), argumentos suportados: [criarColecao, povoarColecao, consultasERelatorio])
+# -host <host> -> define o host da aplicação Solr, o padrão é localhost
+# -p <porta> -> define a porta do host da aplicação Solr,o padrão é 8983
+# -c <colecao> -> define a coleção utilizada
+# -bd <baseCFC> -> define ocaminho para a base de dados CFC
+# -out <arquivo> -> define o arquivo para salvar o relatório {consultasERelatorio}
+# -conf <configuracao> -> define o nome da configuração utilizada na coleção {criarColecao}, o padrão é _default
+# -nshard <qtd_shards> -> define a quantidade de shards da coleção {criarColecao}, o padrão é 2
+# -nReplicas <qtd_replicas> -> define a quantidade de réplicas da coleção {criarColecao}, o padrão é 2
+
+-host = localhost
+-p = 8983
+-c = CFC3
+-bd = /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc
+-out = /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultado2.csv
+-conf = _default
+-nshard = 2
+-nreplicas = 2
+

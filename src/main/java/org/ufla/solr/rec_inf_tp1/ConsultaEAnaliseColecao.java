@@ -106,7 +106,7 @@ public class ConsultaEAnaliseColecao {
 		// setWriter("/home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultado3.csv");
 
 		// Preparando o cliente Solr
-		SolrClient solr = ConfigSolrClient.getSolrClient();
+		SolrClient solr = ConfigSolrClient.getSolrClientCollection();
 
 		ExtratorConsultas extratorConsultas = new ExtratorConsultas();
 		Consulta consulta;

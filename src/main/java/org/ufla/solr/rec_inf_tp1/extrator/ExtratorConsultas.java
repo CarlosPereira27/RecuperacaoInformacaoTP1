@@ -21,6 +21,7 @@ public class ExtratorConsultas extends ExtratorGenerico {
 	 * Inicializa as configurações do extrator de consultas da base de dados.
 	 */
 	public ExtratorConsultas() {
+		System.out.println("Iniciando extração das consultas!");
 		setArquivo(ConfigBaseDeDados.arquivoConsulta);
 	}
 

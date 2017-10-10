@@ -1,0 +1,5 @@
+java -jar recInfTP1.jar -cmd criarColecao -host localhost -p 8983 -c CFC -conf _default -nshard 2 -nreplicas 2
+
+java -jar recInfTP1.jar -cmd povoarColecao -host localhost -p 8983 -c CFC -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc
+
+java -jar recInfTP1.jar -cmd consultasERelatorio -host localhost -p 8983 -c CFC -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -out /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultado2.csv
