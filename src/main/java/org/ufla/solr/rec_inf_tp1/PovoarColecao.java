@@ -6,6 +6,7 @@ import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.request.schema.SchemaRequest;
 import org.ufla.solr.rec_inf_tp1.campo.FabricaCampos;
+import org.ufla.solr.rec_inf_tp1.config.ConfigBaseDeDados;
 import org.ufla.solr.rec_inf_tp1.config.ConfigSolrClient;
 import org.ufla.solr.rec_inf_tp1.extrator.ExtratorDocumentos;
 import org.ufla.solr.rec_inf_tp1.model.Documento;
@@ -28,9 +29,12 @@ public class PovoarColecao {
 	 * @param solr
 	 *            cliente Solr
 	 */
-	private static void criaCampos(SolrClient solr) {
+	private void criaCampos(SolrClient solr) {
 		FabricaCampos fabricaCampos = new FabricaCampos();
 		try {
+			System.out.printf("\nAdicionando os campos '%s' e '%s' na coleção '%s'.\n\n",
+					MetaAtributoDocumento.RN.getNome(), MetaAtributoDocumento.CONT.getNome(), ConfigSolrClient.colecao);
+			solr.deleteByQuery("*:*");
 			solr.request(new SchemaRequest.AddField(fabricaCampos.criarCampoCONT()));
 			solr.request(new SchemaRequest.AddField(fabricaCampos.criarCampoRN()));
 		} catch (SolrServerException | IOException e) {
@@ -44,7 +48,7 @@ public class PovoarColecao {
 	 * @param solr
 	 *            cliente Solr
 	 */
-	private static void deletaCampos(SolrClient solr) {
+	private void deletaCampos(SolrClient solr) {
 		try {
 			solr.request(new SchemaRequest.DeleteField(MetaAtributoDocumento.CONT.getNome()));
 			solr.request(new SchemaRequest.DeleteField(MetaAtributoDocumento.RN.getNome()));
@@ -59,9 +63,13 @@ public class PovoarColecao {
 	 * @param solr
 	 *            cliente Solr
 	 */
-	private static void deletaBaseDeDados(SolrClient solr) {
+	private void deletaBaseDeDados(SolrClient solr) {
 		try {
-			System.out.println("Respostar deletar -> " + solr.deleteByQuery("*:*"));
+			System.out.printf(
+					"\nDeletando todos documentos contidos na coleção '%s'.\nDeletando os campos '%s' e '%s' da coleção '%s' se existir. Pois, estes campos serão configurados para serem usados\n",
+					ConfigSolrClient.colecao, MetaAtributoDocumento.RN.getNome(), MetaAtributoDocumento.CONT.getNome(),
+					ConfigSolrClient.colecao);
+			solr.deleteByQuery("*:*");
 			deletaCampos(solr);
 			System.out.println("Commit -> " + solr.commit());
 		} catch (SolrServerException | IOException e) {
@@ -70,7 +78,17 @@ public class PovoarColecao {
 
 	}
 
-	public static void main(String args[]) throws Exception {
+	/**
+	 * Povoa a coleção, definida na classe de configuração
+	 * {@link ConfigSolrClient}, com a base de dados CFC, definida na classe de
+	 * configuração {@link ConfigBaseDeDados}, na aplicação Solr.
+	 * 
+	 * @throws IOException
+	 */
+	public void povoar() throws Exception {
+		System.out.printf(
+				"\nIniciando povoamento da coleção '%s' da aplicação Solr Cloud, que está executando no host '%s'. O povoamento é feito com a base de dados cfc localizada em '%s/'.\n\n",
+				ConfigSolrClient.colecao, ConfigSolrClient.getInfoSolr(), ConfigBaseDeDados.caminhoAbsolutoCFC);
 		// Preparando o cliente Solr
 		SolrClient solr = ConfigSolrClient.getSolrClientCollection();
 
@@ -86,14 +104,11 @@ public class PovoarColecao {
 		}
 
 		// Salva as mudanças
-		System.out.println("Commit -> " + solr.commit());
-		System.out.println("Documents added");
+		System.out.println("\nCommit -> " + solr.commit());
+		System.out.println("Documentos adicionados com sucesso!");
 
-		try {
-			solr.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		solr.close();
+
 	}
 
 }

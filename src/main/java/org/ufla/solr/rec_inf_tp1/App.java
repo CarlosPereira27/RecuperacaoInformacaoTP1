@@ -1,5 +1,7 @@
 package org.ufla.solr.rec_inf_tp1;
 
+import java.util.Locale;
+
 import org.ufla.solr.rec_inf_tp1.config.ConfigBaseDeDados;
 import org.ufla.solr.rec_inf_tp1.config.ConfigSolrClient;
 import org.ufla.solr.rec_inf_tp1.extrator.ExtratorConfiguracoes;
@@ -7,6 +9,7 @@ import org.ufla.solr.rec_inf_tp1.model.AtributoGenerico;
 import org.ufla.solr.rec_inf_tp1.model.MetaArgumento;
 
 /**
+ * Classe principal da aplicação.
  * 
  * @author carlos
  * @author douglas
@@ -15,22 +18,27 @@ import org.ufla.solr.rec_inf_tp1.model.MetaArgumento;
  */
 public class App {
 
-	private static final String HELP_MESSAGE = "Os comandos disponíveis são:\n"
-			+ "java -jar recupInfSolr.jar -cmd criarColecao -host <host> -p <porta> -c <colecao> -conf <configuracao> -nshard <qtd_shards> -nReplicas <qtd_replicas>\n"
-			+ "java -jar recupInfSolr.jar -cmd povoarColecao -host <host> -p <porta> -c <colecao> -bd <baseCFC>\n"
-			+ "java -jar recupInfSolr.jar -cmd consultasERelatorio -host <host> -p <porta> -c <colecao> -bd <baseCFC> -out <arquivo>\n"
+	private static final String HELP_MESSAGE = "\nOs comandos disponíveis são:\n"
+			+ "java -jar recInfTP1.jar -cmd addConfig -zkhost <host_zoo_keeper> -zkp <porta_zoo_keepper> -conf <nome_configuracao> -dirconf <diretorio_configuracao>\n"
+			+ "java -jar recInfTP1.jar -cmd criarColecao -host <host> -p <porta> -c <colecao> -conf <nome_configuracao> -nshard <qtd_shards> -nReplicas <qtd_replicas>\n"
+			+ "java -jar recInfTP1.jar -cmd deletarColecao -host <host> -p <porta> -c <colecao>\n"
+			+ "java -jar recInfTP1.jar -cmd povoarColecao -host <host> -p <porta> -c <colecao> -bd <baseCFC>\n"
+			+ "java -jar recInfTP1.jar -cmd consultasERelatorio -host <host> -p <porta> -c <colecao> -bd <baseCFC> -out <arquivo>\n"
 
 			+ "\nParâmetros do programa:\n"
-			+ "-cmd <arg> -> comando a ser realizado (obrigatório), argumentos suportados: [criarColecao, povoarColecao, consultasERelatorio])\n"
+			+ "-cmd <arg> -> comando a ser realizado (obrigatório), argumentos suportados: [addConf, criarColecao, deletarColecao, povoarColecao, consultasERelatorio]\n"
 			+ "-host <host> -> define o host da aplicação Solr, o padrão é localhost\n"
 			+ "-p <porta> -> define a porta do host da aplicação Solr,o padrão é 8983\n"
 			+ "-c <colecao> -> define a coleção utilizada\n"
 			+ "-bd <baseCFC> -> define ocaminho para a base de dados CFC\n"
 			+ "-out <arquivo> -> define o arquivo para salvar o relatório {consultasERelatorio}\n"
-			+ "-conf <configuracao> -> define o nome da configuração utilizada na coleção {criarColecao}, o padrão é _default\n"
+			+ "-conf <nome_configuracao> -> define o nome da configuração utilizada na coleção {criarColecao}, o padrão é _default\n"
 			+ "-nshard <qtd_shards> -> define a quantidade de shards da coleção {criarColecao}, o padrão é 2\n"
-			+ "-nReplicas <qtd_replicas> -> define a quantidade de shards da coleção {criarColecao}, o padrão é 2"
-			+ "-h ou -help (mostra a mensagem de ajuda)\n"
+			+ "-nReplicas <qtd_replicas> -> define a quantidade de shards da coleção {criarColecao}, o padrão é 2\n"
+			+ "-dirconf <diretorio_configuracao> -> define o diretório de uma determinada configuração {addConf}\n"
+			+ "-zkhost <host_zoo_keeper> ->  define o host da aplicação Solr ZooKeeper {addConf}, o padrão é localhost\n"
+			+ "-zkp <porta_zoo_keepper> -> define a porta do host da aplicação Solr ZooKeeper {addConf},o padrão é 9983\n"
+			+ "-h ou -help -> mostra a mensagem de ajuda\n"
 
 			+ "\nPara facilitar o uso dos parâmetros no programa, defina os parâmetros no arquivo de configuração.\n"
 			+ "O arquivo de configuração deve chamar 'config.prop', e deve seguir o padrão do arquivo de configuração exemplo.\n";
@@ -46,7 +54,7 @@ public class App {
 	/**
 	 * Arquivo de saída para relatórios.
 	 */
-	private static String arquivoSaida;
+	public static String arquivoSaida;
 
 	/**
 	 * Define o valor de um argumento da aplicação.
@@ -79,7 +87,7 @@ public class App {
 			ConfigSolrClient.colecao = valor;
 			break;
 		case HOST:
-			ConfigSolrClient.URL = valor;
+			ConfigSolrClient.host = valor;
 			break;
 		case P:
 			try {
@@ -111,13 +119,26 @@ public class App {
 				erroDefinicaoDeNumero(valor, MetaArgumento.N_REPLICAS.getNome());
 			}
 			break;
+		case DIR_CONF:
+			ConfigSolrClient.diretorioConfiguracao = valor;
+			break;
+		case ZK_HOST:
+			ConfigSolrClient.hostZooKeeper = valor;
+			break;
+		case ZK_P:
+			try {
+				ConfigSolrClient.portaZooKeeper = Integer.parseInt(valor);
+			} catch (NumberFormatException e) {
+				erroDefinicaoDeNumero(valor, MetaArgumento.ZK_P.getNome());
+			}
+			break;
 		default:
 			break;
 		}
 	}
 
 	private static void erroDefinicaoDeNumero(String valor, String argumento) {
-		System.out.println(String.format("Erro na definicação do argumento %s! O valor não é um número inteiro (%s).\n",
+		System.out.println(String.format("Erro na definição do argumento %s! O valor não é um número inteiro (%s).\n",
 				argumento, valor));
 		System.exit(0);
 	}
@@ -129,14 +150,18 @@ public class App {
 		ExtratorConfiguracoes extratorConfiguracoes = new ExtratorConfiguracoes();
 		AtributoGenerico configuracao;
 		while ((configuracao = extratorConfiguracoes.proximaConfiguracao()) != null) {
-			// System.out.println(configuracao.getAtributo().getNome() + " =
-			// "+configuracao.getValor());
+			// System.out.println(configuracao.getAtributo().getNome() + " = " +
+			// configuracao.getValor());
 			definirArgumento(configuracao);
 		}
-		System.out.println("Fim da extração de configurações do arquivo de configurações.\n\n");
+		System.out.println("Fim da extração de configurações do arquivo de configurações.");
 	}
 
 	public static void main(String[] args) throws Exception {
+		// Definição de locale em inglês para imprimir corretamente ponto
+		// flutuando com o ponto sendo o divisor da parte inteira da
+		// fracionária.
+		Locale.setDefault(Locale.ENGLISH);
 		extrairConfiguracoes();
 		if (args.length == 1) {
 			MetaArgumento argumento = MetaArgumento.getArgumento(args[0]);
@@ -166,18 +191,31 @@ public class App {
 
 		switch (cmd) {
 		case POVOAR_COLECAO:
-			PovoarColecao.main(args);
+			PovoarColecao povoarColecao = new PovoarColecao();
+			povoarColecao.povoar();
 			break;
 		case CONSULTAS_E_RELATORIO:
+			ConsultaEAnaliseColecao consultaEAnaliseColecao = new ConsultaEAnaliseColecao();
 			if (arquivoSaida == null) {
-				ConsultaEAnaliseColecao.setWriter(System.out);
+				consultaEAnaliseColecao.setWriter(System.out);
 			} else {
-				ConsultaEAnaliseColecao.setWriter(arquivoSaida);
+				consultaEAnaliseColecao.setWriter(arquivoSaida);
 			}
-			ConsultaEAnaliseColecao.main(args);
+			consultaEAnaliseColecao.executar();
 			break;
 		case CRIAR_COLECAO:
-			CriarColecao.main(args);
+			CriarColecao criarColecao = new CriarColecao();
+			criarColecao.criar();
+			break;
+		case DELETAR_COLECAO:
+			DeletarColecao deletarColecao = new DeletarColecao();
+			deletarColecao.deletar();
+			break;
+		case ADICIONAR_CONFIGURACAO:
+			AdicionarConfiguracao adiconarConfiguracao = new AdicionarConfiguracao();
+			adiconarConfiguracao.adicionar();
+			break;
+		default:
 			break;
 		}
 

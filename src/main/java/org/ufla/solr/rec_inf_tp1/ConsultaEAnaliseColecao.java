@@ -16,6 +16,7 @@ import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
+import org.ufla.solr.rec_inf_tp1.config.ConfigBaseDeDados;
 import org.ufla.solr.rec_inf_tp1.config.ConfigSolrClient;
 import org.ufla.solr.rec_inf_tp1.extrator.ExtratorConsultas;
 import org.ufla.solr.rec_inf_tp1.metrica.MetricaPrecisaoRevocacao;
@@ -50,7 +51,7 @@ public class ConsultaEAnaliseColecao {
 	 * @return lista com identificadores dos documentos recuperados pela
 	 *         consulta.
 	 */
-	public static List<Integer> consultar(SolrClient solr, Consulta consulta) {
+	private List<Integer> consultar(SolrClient solr, Consulta consulta) {
 		SolrQuery solrQuery = new SolrQuery();
 		solrQuery.setStart(ROWS_START).setRows(ROWS_VALOR).setSort(SortClause.desc(SORT_ITEM))
 				.setFields(FIELD_LIST_ITEM)
@@ -64,6 +65,7 @@ public class ConsultaEAnaliseColecao {
 				documentosRecuperados.add((Integer) doc.getFieldValue(MetaAtributoDocumento.RN.getNome()));
 			}
 		} catch (SolrServerException | IOException e) {
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
 		return documentosRecuperados;
@@ -81,10 +83,11 @@ public class ConsultaEAnaliseColecao {
 	 * @param arquivoSaida
 	 *            nome do arquivo em que deverá escrever o relatório
 	 */
-	public static void setWriter(String arquivoSaida) {
+	public void setWriter(String arquivoSaida) {
 		try {
 			setWriter(new FileOutputStream(arquivoSaida));
 		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 			throw new RuntimeException(String.format("Arquivo %s não existe!\n", arquivoSaida));
 		}
@@ -97,14 +100,19 @@ public class ConsultaEAnaliseColecao {
 	 * @param out
 	 *            fluxo de saída de dados
 	 */
-	public static void setWriter(OutputStream out) {
+	public void setWriter(OutputStream out) {
 		bw = new BufferedWriter(new OutputStreamWriter(out));
 	}
 
-	public static void main(String[] args) throws IOException {
-		// Definindo fluxo de saída de dados para salvar relatório.
-		// setWriter("/home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultado3.csv");
-
+	/**
+	 * Realiza as consultas e a análise dos resultados.
+	 * 
+	 * @throws IOException
+	 */
+	public void executar() throws IOException {
+		System.out.printf(
+				"\nIniciando consultas da base de dados cfc localizada em '%s/cfcquery' na coleção '%s' da aplicação Solr Cloud, que está executando no host '%s'.\n\n",
+				ConfigBaseDeDados.caminhoAbsolutoCFC, ConfigSolrClient.colecao, ConfigSolrClient.getInfoSolr());
 		// Preparando o cliente Solr
 		SolrClient solr = ConfigSolrClient.getSolrClientCollection();
 
@@ -123,14 +131,19 @@ public class ConsultaEAnaliseColecao {
 
 		relatorio.gerarRelatorio();
 
-		try {
-			bw.close();
-			solr.close();
-		} catch (IOException e) {
-			e.printStackTrace();
+		bw.close();
+
+		System.out.printf("\nConsultas realizadas com sucesso!\nRelatório gerado com sucesso no arquivo '%s'\n\n",
+				App.arquivoSaida);
+
+		// Gerar gráficos
+		if (App.arquivoSaida != null) {
+			GerarGraficos gerarGraficos = new GerarGraficos(App.arquivoSaida);
+			gerarGraficos.gerar();
 		}
 
-		System.out.println("Consultas realizadas com sucesso!\nRelatório gerado com sucesso!");
+		solr.close();
+
 	}
 
 }

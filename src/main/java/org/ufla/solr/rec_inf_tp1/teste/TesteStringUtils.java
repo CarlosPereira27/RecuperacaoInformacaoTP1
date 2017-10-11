@@ -4,7 +4,14 @@ import java.util.Arrays;
 
 import org.ufla.solr.rec_inf_tp1.utils.StringUtils;
 
-
+/**
+ * Testa o método de split definido na classe StringUtils.
+ * 
+ * @author carlos
+ * @author douglas
+ * @author italo
+ *
+ */
 public class TesteStringUtils {
 
 	public static void main(String[] args) {

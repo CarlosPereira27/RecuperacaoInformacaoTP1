@@ -1,8 +1,21 @@
 package org.ufla.solr.rec_inf_tp1.utils;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Responsável por alguns métodos de utilidade geral relacionados a String e
+ * fluxo de dados.
+ * 
+ * @author carlos
+ * @author douglas
+ * @author italo
+ *
+ */
 public class StringUtils {
 
 	/**
@@ -50,6 +63,29 @@ public class StringUtils {
 			indice = pularCaracteres(str, c, fim);
 		}
 		return tokens.toArray(new String[0]);
+	}
+
+	/**
+	 * Recupera uma mensagem inteira de um fluxo de entrada de dados.
+	 * 
+	 * @param input
+	 *            fluxo de entrada de dados
+	 * @return mensagem contida no fluxo de entrada de dados
+	 */
+	public static String getMensagem(InputStream input) {
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(input));
+		StringBuilder mensagem = new StringBuilder();
+		String linha;
+		try {
+			while ((linha = bufferedReader.readLine()) != null) {
+				mensagem.append(linha).append('\n');
+			}
+			bufferedReader.close();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+			return null;
+		}
+		return mensagem.toString();
 	}
 
 }

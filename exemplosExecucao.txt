@@ -1,5 +1,11 @@
-java -jar recInfTP1.jar -cmd criarColecao -host localhost -p 8983 -c CFC -conf _default -nshard 2 -nreplicas 2
+java -jar recInfTP1.jar -cmd addConfig -zkhost localhost -zkp 9983 -conf conf3 -dirconf /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/configsets/_default/conf
 
-java -jar recInfTP1.jar -cmd povoarColecao -host localhost -p 8983 -c CFC -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc
+java -jar recInfTP1.jar -cmd criarColecao -host localhost -p 8983 -c cfc -conf conf3 -nshard 2 -nreplicas 2
 
-java -jar recInfTP1.jar -cmd consultasERelatorio -host localhost -p 8983 -c CFC -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -out /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultado2.csv
+java -jar recInfTP1.jar -cmd deletarColecao -host localhost -p 8983 -c cfc
+
+java -jar recInfTP1.jar -cmd povoarColecao -host localhost -p 8983 -c cfc -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc
+
+java -jar recInfTP1.jar -cmd consultasERelatorio -host localhost -p 8983 -c cfc -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -out /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultado.csv
+
+java -jar recInfTP1.jar -h

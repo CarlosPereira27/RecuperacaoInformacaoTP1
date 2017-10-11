@@ -17,7 +17,7 @@ public abstract class ConfigBaseDeDados {
 	 * Define o caminho dos arquivos com a base de dados dentro da máquina em
 	 * que está rodando o projeto.
 	 */
-	private static String caminhoAbsolutoCFC = "/home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc";
+	public static String caminhoAbsolutoCFC;
 
 	/**
 	 * Define o array com os nomes dos arquivos da base de dados de documentos.

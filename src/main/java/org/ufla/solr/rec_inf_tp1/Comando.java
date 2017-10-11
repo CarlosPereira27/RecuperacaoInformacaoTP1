@@ -12,7 +12,9 @@ public enum Comando {
 
 	POVOAR_COLECAO("povoarColecao"), 
 	CONSULTAS_E_RELATORIO("consultasERelatorio"), 
-	CRIAR_COLECAO("criarColecao");
+	CRIAR_COLECAO("criarColecao"),
+	ADICIONAR_CONFIGURACAO("addConfig"),
+	DELETAR_COLECAO("deletarColecao");
 
 	/**
 	 * Nome do comando.

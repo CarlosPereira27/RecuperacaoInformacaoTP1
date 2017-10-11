@@ -19,7 +19,7 @@ def proximosPontos(arquivo):
 	revocacao = [];
 	precisao = [];
 	linha = arquivo.readline()[:-1];
-	while (linha):
+	while linha:
 		tokens = linha.split(",");
 		revocacao.append(float(tokens[0]));
 		precisao.append(float(tokens[1]));
@@ -63,7 +63,7 @@ def plotGrafico(arquivoNome, titulo, sufixoArquivo, pontos, dirSep):
 	plt.xlabel("Revocação")
 	plt.ylabel('Precisão')
 	grafico = arquivoNome + sufixoArquivo;
-	if (dirSep):
+	if dirSep:
 		plt.savefig(arquivoNome + "png/" + sufixoArquivo + ".png", dpi=300);
 		plt.savefig(arquivoNome + "svg/" + sufixoArquivo + ".svg", dpi=300);
 	else:
@@ -86,30 +86,36 @@ def criarDiretorio(diretorioStr):
 Gera os gráficos relacionados aos resultados encontrados no programa Java.
 
 @param argv 
-			como argumento, deve receber o nome do arquivo de resultados
+			como argumento, deve receber o nome do arquivo de resultados e o modo de geração dos gráficos (opcional).
+			O modo de geração dos gráficos pode ser: simples ou completo. O simples, que é o padrão, apenas gera o
+			gráfico da tabela média de revocação/precisão. Já o completo gera gráficos para todas as consultas.  
 """
 def main(argv):
 	arqResultadosStr = ''
+	modo = 'simples'
 	try:
-		opts, args = getopt.getopt(argv,"hr:",["resultado="])
+		opts, args = getopt.getopt(argv,"hr:m:",["resultado=", "modo="])
 	except getopt.GetoptError:
 		print getopt.GetoptError.message
-		print 'python gerarGraficos.py -r <resultados.csv>'
+		print 'python gerarGraficos.py -r <resultados.csv> -m <modo>'
 		sys.exit(2)
 	for opt, arg in opts:
 		if opt == '-h':
-			print 'python gerarGraficos.py -r <resultados.csv>'
+			print 'python gerarGraficos.py -r <resultados.csv> -m <modo>'
 			sys.exit()
 		elif opt in ("-r", "--resultado"):
 			arqResultadosStr = arg
+		elif opt in ("-m", "--modo"):
+			modo = arg
 	arquivo = open(arqResultadosStr, 'r');
 	pularLinhas(arquivo, 2);
 	pontos = proximosPontos(arquivo);
 	plotGrafico(arqResultadosStr[:-4], "Gráfico Revocação/Precisão Médio" , "_GraficoRevPrecMed", pontos, False);
 	
 	
-	# arquivo.close();
-	# sys.exit(0);
+	if modo != "completo":
+		arquivo.close();
+		sys.exit(0);
 	"""
 	Comentar as duas linhas acimas para gerar todos os gráficos.
 	"""
