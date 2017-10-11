@@ -940,4 +940,8 @@
      </similarity>
     -->
 
+	<!-- Fábrica de instâncias da classe que implementa o modelo BM25 no Apache Solr, a classe que implementa o modelo chama BM25Similarity-->
+   <similarity class="solr.BM25SimilarityFactory">
+   </similarity>
+
 </schema>
