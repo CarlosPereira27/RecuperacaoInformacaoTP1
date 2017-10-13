@@ -1,0 +1,869 @@
+item
+login
+again
+0
+1
+11
+12
+13
+14
+15
+16
+17
+18
+19
+2
+20
+21
+22
+23
+24
+25
+25
+26
+27
+3
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+4
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+5
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+6
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+7
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+8
+80
+81
+82
+83
+84
+85
+86
+87
+89
+9
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+a
+a
+ab
+about
+above
+ac
+according
+across
+ads
+ae
+af
+after
+afterwards
+against
+albeit
+all
+almost
+alone
+along
+already
+also
+although
+always
+among
+amongst
+an
+and
+another
+any
+anybody
+anyhow
+anyone
+anything
+anyway
+anywhere
+apart
+are
+around
+as
+ask
+asp
+at
+author
+av
+available
+b
+baf
+be
+became
+because
+become
+becomes
+becoming
+been
+before
+beforehand
+behind
+being
+below
+beside
+besides
+between
+beyond
+bf
+biz
+both
+but
+by
+c
+ca
+can
+cannot
+canst
+cd
+cee
+certain
+cf
+cfm
+cfrd
+cgi
+choose
+click
+cm
+co
+com
+conducted
+conference
+considered
+contrariwise
+cos
+could
+crd
+cu
+cx
+cx
+d
+date
+day
+described
+describes
+designed
+determine
+determined
+dfe
+different
+discussed
+do
+does
+doesn't
+doing
+dont
+dost
+doth
+double
+down
+dr
+dr
+dual
+due
+during
+e
+each
+eb
+ec
+either
+else
+elsewhere
+enough
+et
+etc
+eu
+even
+ever
+every
+everybody
+everyone
+everything
+everywhere
+except
+excepted
+excepting
+exception
+exclude
+excluding
+exclusive
+f
+fa
+fa
+fae
+far
+farther
+farthest
+few
+ff
+first
+for
+formerly
+forth
+forward
+found
+free
+from
+front
+further
+furthermore
+furthest
+g
+gcn
+general
+get
+gif
+given
+gm
+go
+h
+had
+halves
+hardly
+has
+hast
+hath
+have
+he
+hence
+henceforth
+her
+her
+here
+hereabouts
+hereafter
+hereby
+herein
+hereto
+hereupon
+hers
+herself
+him
+him
+himself
+hindmost
+his
+hither
+hitherto
+how
+however
+howsoever
+hr
+i
+I
+ie
+if
+in
+inasmuch
+inc
+include
+included
+including
+indeed
+indoors
+inside
+insomuch
+instead
+international
+into
+investigated
+inward
+inwards
+is
+it
+it
+its
+itself
+j
+jpg
+just
+k
+kg
+kind
+km
+l
+la
+last
+latter
+latterly
+less
+lest
+let
+like
+little
+low
+ltd
+m
+made
+many
+may
+maybe
+me
+mean
+meantime
+meanwhile
+might
+more
+more
+moreover
+most
+mostly
+mr
+mrs
+ms
+much
+must
+my
+myself
+n
+namely
+need
+neither
+net
+never
+nevertheless
+new
+news
+next
+no
+no
+nobody
+none
+nonetheless
+noone
+nope
+nor
+not
+nothing
+notwithstanding
+now
+nowadays
+nowhere
+nu
+o
+obtained
+of
+of
+off
+often
+oh
+ok
+on
+once
+one
+only
+onto
+or
+org
+other
+others
+otherwise
+ought
+our
+ours
+ourselves
+out
+outside
+over
+own
+p
+page
+per
+performance
+performed
+perhaps
+pl
+plenty
+possible
+post
+present
+presented
+presents
+provide
+provided
+provides
+q
+quite
+r
+rather
+really
+related
+report
+required
+results
+roll
+round
+s
+said
+sake
+same
+sang
+save
+saw
+say
+see
+seeing
+seem
+seemed
+seeming
+seems
+seen
+seldom
+selected
+selves
+sent
+several
+sfrd
+shalt
+she
+should
+show
+shown
+sideways
+significant
+since
+slept
+slew
+slung
+slunk
+smote
+so
+some
+somebody
+somehow
+someone
+something
+sometime
+sometimes
+somewhat
+somewhere
+sort
+spake
+spat
+spoke
+spoken
+sprang
+sprung
+srd
+stave
+staves
+still
+studies
+such
+supposing
+t
+ta
+take
+tested
+than
+that
+the
+thee
+their
+them
+themselves
+then
+thence
+thenceforth
+there
+thereabout
+thereabouts
+thereafter
+thereby
+therefore
+therein
+thereof
+thereon
+thereto
+thereupon
+these
+they
+this
+this
+tho
+those
+thou
+though
+thrice
+through
+throughout
+thru
+thus
+thy
+thyself
+till
+time
+to
+to
+together
+too
+toward
+towards
+try
+types
+u
+unable
+under
+underneath
+unless
+unlike
+until
+up
+upon
+upward
+upwards
+us
+use
+used
+using
+v
+various
+very
+via
+vol
+vs
+w
+want
+was
+we
+week
+well
+were
+what
+whatever
+whatsoever
+when
+whence
+whenever
+whensoever
+where
+whereabouts
+whereafter
+whereas
+whereat
+whereby
+wherefore
+wherefrom
+wherein
+whereinto
+whereof
+whereon
+wheresoever
+whereto
+whereunto
+whereupon
+wherever
+wherewith
+whether
+whew
+which
+whichever
+whichsoever
+while
+whilst
+whither
+who
+whoa
+whoever
+whole
+whom
+whomever
+whomsoever
+whose
+whosoever
+why
+will
+wilt
+with
+within
+without
+worse
+worst
+would
+wow
+www
+x
+y
+ye
+year
+yet
+yippee
+you
+your
+yours
+yourself
+yourselves
+z
+de             |  of, from
+a              |  the; to, at; her
+o              |  the; him
+que            |  who, that
+e              |  and
+do             |  de + o
+da             |  de + a
+em             |  in
+um             |  a
+para           |  for
+com            |  with
+nao            |  not, no
+uma            |  a
+os             |  the; them
+no             |  em + o
+se             |  himself etc
+na             |  em + a
+por            |  for
+mais           |  more
+as             |  the; them
+dos            |  de + os
+como           |  as, like
+mas            |  but
+foi            |  from SER
+ao             |  a + o
+ele            |  he
+das            |  de + as
+ter            |  from TER
+seu            |  his
+sua            |  her
+ou             |  or
+quando         |  when
+muito          |  much
+ha             | h�         from HAV
+nos            |  em + os; us
+ja             |  already, now
+esta           | est�       from EST
+eu             |  I
+tambem         |  also
+so             |  only, just
+pelo           |  per + o
+pela           |  per + a
+ate            |  up to
+isso           |  that
+ela            |  he
+entre          |  between
+era            |  from SER
+depois         |  after
+sem            |  without
+mesmo          |  same
+aos            |  a + os
+ter            |  from TER
+seus           |  his
+quem           |  whom
+nas            |  em + as
+me             |  me
+esse           |  that
+eles           |  they
+estao          |  from EST
+voce           |  you
+tinha          |  from TER
+foram          |  from SER
+essa           |  that
+num            |  em + um
+nem            |  nor
+suas           |  her
+meu            |  my
+as             |  a + as
+minha          |  my
+tem            | t�m        from TER
+numa           |  em + uma
+pelos          |  per + os
+elas           |  they
+havia          |  from HAV
+seja           |  from SER
+qual           |  which
+sera           |  from SER
+nos            |  we
+tenho          |  from TER
+lhe            |  to him, her
+deles          |  of them
+essas          |  those
+esses          |  those
+pelas          |  per + as
+este           |  this
+fosse          |  from SER
+dele           |  of him
+tu             |  thou
+te             |  thee
+voces          |  you (plural)
+vos            |  you
+lhes           |  to them
+meus           |  my
+minhas         |
+teu            |  thy
+tua            |
+teus           |
+tuas           |
+nosso          | our
+nossa          |
+nossos         |
+nossas         |
+dela           |  of her
+delas          |  of them
+esta           |  this
+estes          |  these
+estas          |  these
+aquele         |  that
+aquela         |  that
+aqueles        |  those
+aquelas        |  those
+isto           |  this
+aquilo         |  that
+estou          |
+esta          |
+estamos          |
+estao          |
+estive          |
+esteve          |
+estivemos          |
+estiveram          |
+estava          |
+estavamos          |
+estavam          |
+estivera          |
+estiv�ramos          |
+esteja          |
+estejamos          |
+estejam          |
+estivesse          |
+estiv�ssemos          |
+estivessem          |
+estiver          |
+estivermos          |
+estiverem          |
+hei          |
+ha          |
+havemos          |
+hao          |
+houve          |
+houvemos          |
+houveram          |
+houvera          |
+houveramos          |
+haja          |
+hajamos          |
+hajam
+houvesse
+houvessemos
+houvessem
+houver
+houvermos
+houverem
+houverei
+houvera
+houveremos
+houverao
+houveria
+houveriamos
+houveriam
+sou
+somos
+sao
+era
+eramos
+eram
+fui
+foi
+fomos
+foram
+fora
+faramos
+seja
+sejamos
+sejam
+fosse
+fossemos
+fossem
+for
+formos
+forem
+serei
+sera
+seremos
+serao
+seria
+seriamos
+seriam
+tenho
+tem
+temos
+tem
+tinha
+tinhamos
+tinham
+tive
+teve
+tivemos
+tiveram
+tivera
+tiveramos
+tenha
+tenhamos
+tenham
+tivesse
+tivessemos
+tivessem
+tiver
+tivermos
+tiverem
+terei
+tera
+teremos
+terao
+teria
+teraamos
+teriam

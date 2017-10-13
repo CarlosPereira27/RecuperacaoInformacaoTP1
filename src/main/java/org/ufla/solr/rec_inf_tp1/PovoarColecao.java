@@ -11,6 +11,7 @@ import org.ufla.solr.rec_inf_tp1.config.ConfigSolrClient;
 import org.ufla.solr.rec_inf_tp1.extrator.ExtratorDocumentos;
 import org.ufla.solr.rec_inf_tp1.model.Documento;
 import org.ufla.solr.rec_inf_tp1.model.MetaAtributoDocumento;
+import org.ufla.solr.rec_inf_tp1.preprocessing.PreProcessamento;
 
 /**
  * Responsável por criar os campos no schema do Solr e adicionar os documentos
@@ -100,6 +101,7 @@ public class PovoarColecao {
 		Documento documento;
 
 		while ((documento = extratorDocumentos.proximoDocumento()) != null) {
+			documento.setConteudo(PreProcessamento.processText(documento.getConteudo()));
 			solr.add(documento.toSolrInputDocument());
 		}
 
