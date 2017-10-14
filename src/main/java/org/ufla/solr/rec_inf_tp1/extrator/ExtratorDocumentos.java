@@ -29,7 +29,7 @@ public class ExtratorDocumentos extends ExtratorGenerico {
 	public ExtratorDocumentos() {
 		System.out.println("Iniciando extração dos documentos!");
 		indiceArquivoAtual = 0;
-		setArquivo(ConfigBaseDeDados.getArquivoDocumento(indiceArquivoAtual));
+		setArquivo(ConfigBaseDeDados.getInstance().getArquivoDocumento(indiceArquivoAtual));
 	}
 
 	/**
@@ -41,7 +41,7 @@ public class ExtratorDocumentos extends ExtratorGenerico {
 	private boolean proximoArquivo() {
 		indiceArquivoAtual++;
 		fechaLeitor();
-		return setArquivo(ConfigBaseDeDados.getArquivoDocumento(indiceArquivoAtual));
+		return setArquivo(ConfigBaseDeDados.getInstance().getArquivoDocumento(indiceArquivoAtual));
 	}
 
 	/**

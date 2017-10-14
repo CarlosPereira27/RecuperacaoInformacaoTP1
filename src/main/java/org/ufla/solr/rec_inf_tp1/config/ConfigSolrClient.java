@@ -9,61 +9,86 @@ import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.common.cloud.SolrZkClient;
 
 /**
- * Representação das configurações da aplicação Solr.
+ * Representação das configurações da aplicação Solr. Utiliza o padrão de
+ * projeto singleton.
  * 
  * @author carlos
  * @author douglas
  * @author italo
  *
  */
-public abstract class ConfigSolrClient {
+public class ConfigSolrClient {
+
+	/**
+	 * Única instância de ConfigSolrClient da aplicação (Singleton)
+	 */
+	private static ConfigSolrClient configSolrClient;
 
 	/**
 	 * Host da aplicação Solr
 	 */
-	public static String host = "localhost";
+	private String host = "localhost";
 
 	/**
 	 * Porta utilizada pela aplicação Solr.
 	 */
-	public static int porta = 8983;
+	private int porta = 8983;
 
 	/**
 	 * Coleção a ser utilizada da aplicação Solr.
 	 */
-	public static String colecao = "CFC";
+	private String colecao = "CFC";
 
 	/**
 	 * Nome da configuração da coleção.
 	 */
-	public static String configuracao = "_default";
+	private String configuracao = "_default";
 
 	/**
 	 * Quantidade de shards da coleção.
 	 */
-	public static Integer qtdShards = 2;
+	private Integer qtdShards = 2;
 
 	/**
 	 * Quantidade de réplicas da coleção.
 	 */
-	public static Integer qtdReplicas = 2;
+	private Integer qtdReplicas = 2;
 
 	/**
 	 * Diretório de uma determinada configuração.
 	 */
-	public static String diretorioConfiguracao;
+	private String diretorioConfiguracao;
 
 	/**
 	 * Host da aplicação Solr ZooKeeper.
 	 */
-	public static String hostZooKeeper;
+	private String hostZooKeeper;
 
 	/**
 	 * Porta utilizada pela aplicação Solr ZooKeeper.
 	 */
-	public static Integer portaZooKeeper;
+	private Integer portaZooKeeper;
 
-	public static Path getPathDiretorioConfiguracao() {
+	/**
+	 * Construtor privado para implementação do padrão Singleton
+	 */
+	private ConfigSolrClient() {
+
+	}
+
+	/**
+	 * Retorna a única instância de ConfigSolrClient.
+	 * 
+	 * @return única instância de ConfigSolrClient
+	 */
+	public static ConfigSolrClient getInstance() {
+		if (configSolrClient == null) {
+			configSolrClient = new ConfigSolrClient();
+		}
+		return configSolrClient;
+	}
+
+	public Path getPathDiretorioConfiguracao() {
 		return new File(diretorioConfiguracao).toPath();
 	}
 
@@ -72,9 +97,9 @@ public abstract class ConfigSolrClient {
 	 * 
 	 * @return string com as informações da coleção.
 	 */
-	public static String getInfoColecao() {
-		return String.format("%s (configuração:%s, qtdShards:%d, qtdReplicas=%d)", colecao, configuracao,
-				qtdShards, qtdReplicas);
+	public String getInfoColecao() {
+		return String.format("%s (configuração:%s, qtdShards:%d, qtdReplicas=%d)", colecao, configuracao, qtdShards,
+				qtdReplicas);
 	}
 
 	/**
@@ -82,7 +107,7 @@ public abstract class ConfigSolrClient {
 	 * 
 	 * @return string com as informações do Solr.
 	 */
-	public static String getInfoSolr() {
+	public String getInfoSolr() {
 		return String.format("http://%s:%d", host, porta);
 	}
 
@@ -91,7 +116,7 @@ public abstract class ConfigSolrClient {
 	 * 
 	 * @return string com as informações do Solr ZooKeeper.
 	 */
-	public static String getInfoSolrZooKeeper() {
+	public String getInfoSolrZooKeeper() {
 		return String.format("%s:%d", hostZooKeeper, portaZooKeeper);
 	}
 
@@ -100,7 +125,7 @@ public abstract class ConfigSolrClient {
 	 * 
 	 * @return cliente Solr para usar a aplicação Solr com a coleção
 	 */
-	public static SolrClient getSolrClientCollection() {
+	public SolrClient getSolrClientCollection() {
 		return new HttpSolrClient.Builder(getInfoSolr() + "/solr/" + colecao).build();
 	}
 
@@ -109,7 +134,7 @@ public abstract class ConfigSolrClient {
 	 * 
 	 * @return cliente Solr para usar a aplicação Solr
 	 */
-	public static SolrClient getSolrClient() {
+	public SolrClient getSolrClient() {
 		return new HttpSolrClient.Builder(getInfoSolr() + "/solr/").build();
 	}
 
@@ -118,7 +143,7 @@ public abstract class ConfigSolrClient {
 	 * 
 	 * @return cliente Cloud Solr para usar a aplicação Cloud Solr
 	 */
-	public static CloudSolrClient getCloudSolrClient() {
+	public CloudSolrClient getCloudSolrClient() {
 		return new CloudSolrClient.Builder().withSolrUrl(getInfoSolr() + "/solr/").withZkHost(getInfoSolrZooKeeper())
 				.build();
 	}
@@ -130,8 +155,80 @@ public abstract class ConfigSolrClient {
 	 * 
 	 * @return cliente Solr ZooKeeper para usar a aplicação Solr ZooKeeper
 	 */
-	public static SolrZkClient getZkClient() {
+	public SolrZkClient getZkClient() {
 		return new SolrZkClient(getInfoSolrZooKeeper(), ZK_CLIENT_TIMEOUT);
+	}
+
+	public String getHost() {
+		return host;
+	}
+
+	public void setHost(String host) {
+		this.host = host;
+	}
+
+	public int getPorta() {
+		return porta;
+	}
+
+	public void setPorta(int porta) {
+		this.porta = porta;
+	}
+
+	public String getColecao() {
+		return colecao;
+	}
+
+	public void setColecao(String colecao) {
+		this.colecao = colecao;
+	}
+
+	public String getConfiguracao() {
+		return configuracao;
+	}
+
+	public void setConfiguracao(String configuracao) {
+		this.configuracao = configuracao;
+	}
+
+	public Integer getQtdShards() {
+		return qtdShards;
+	}
+
+	public void setQtdShards(Integer qtdShards) {
+		this.qtdShards = qtdShards;
+	}
+
+	public Integer getQtdReplicas() {
+		return qtdReplicas;
+	}
+
+	public void setQtdReplicas(Integer qtdReplicas) {
+		this.qtdReplicas = qtdReplicas;
+	}
+
+	public String getDiretorioConfiguracao() {
+		return diretorioConfiguracao;
+	}
+
+	public void setDiretorioConfiguracao(String diretorioConfiguracao) {
+		this.diretorioConfiguracao = diretorioConfiguracao;
+	}
+
+	public String getHostZooKeeper() {
+		return hostZooKeeper;
+	}
+
+	public void setHostZooKeeper(String hostZooKeeper) {
+		this.hostZooKeeper = hostZooKeeper;
+	}
+
+	public Integer getPortaZooKeeper() {
+		return portaZooKeeper;
+	}
+
+	public void setPortaZooKeeper(Integer portaZooKeeper) {
+		this.portaZooKeeper = portaZooKeeper;
 	}
 
 }

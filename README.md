@@ -4,7 +4,7 @@ Trabalho Prático 1 da disciplina Recuperação de Informação (DCC-UFLA).
 Todos os comandos dessa aplicação dependem de que o _Solr Cloud_ esteja executando na máquina.
 Para instalar o _Solr Cloud_ em sua máquina faça o download no site oficial https://lucene.apache.org/solr/ e siga o tutorial no _link_ https://lucene.apache.org/solr/guide/7_0/solrcloud.html.
 
-Há 3 comandos disponíveis nesta aplicação:
+Há 5 comandos disponíveis nesta aplicação:
 * addConfig - este comando adiciona uma configuração definida pelo usuário na aplicação Solr Cloud (argumentos _-zkhost_, _-zkp_, _-conf_, _-dirconf_)
 * criarColecao - este comando cria uma coleção com as informações da coleção determinadas pelo usuário (argumentos _-c_, _-conf_, _-nshard_, _-nreplicas_)
 * deletarColecao - este comando deleta uma coleção da aplicação Solr Cloud (argumento _-c_)

@@ -22,7 +22,7 @@ public class ExtratorConsultas extends ExtratorGenerico {
 	 */
 	public ExtratorConsultas() {
 		System.out.println("Iniciando extração das consultas!");
-		setArquivo(ConfigBaseDeDados.arquivoConsulta);
+		setArquivo(ConfigBaseDeDados.getInstance().getArquivoConsulta());
 	}
 
 	/**

@@ -117,7 +117,7 @@ public abstract class ExtratorGenerico {
 	 * @return true, se apenas pulou as linhas inúteis, false caso encontrou o
 	 *         fim da base de dados.
 	 */
-	public abstract boolean pularLinhasInuteis();
+	protected abstract boolean pularLinhasInuteis();
 
 	/**
 	 * Recupera o meta atributo que indica que o último meta atributo encontrado
@@ -125,7 +125,7 @@ public abstract class ExtratorGenerico {
 	 * 
 	 * @return meta atributo de continuação de definição do último meta atributo
 	 */
-	public abstract MetaAtributo getContAtributo();
+	protected abstract MetaAtributo getContAtributo();
 
 	/**
 	 * Recupera a classe enumeradora dos atributos desta instância da base de
@@ -134,7 +134,7 @@ public abstract class ExtratorGenerico {
 	 * 
 	 * @return classe enumeradora dos atributos desta instância da base de dados
 	 */
-	public abstract <MetaAtr extends MetaAtributo> Class<MetaAtr> getMetaAtributoClass();
+	protected abstract <MetaAtr extends MetaAtributo> Class<MetaAtr> getMetaAtributoClass();
 
 	/**
 	 * Realiza a leitura do próximo atributo do documento/consulta atual.

@@ -15,7 +15,7 @@ public interface MetaAtributo {
 	 * 
 	 * @return nome do atributo
 	 */
-	public String getNome();
+	String getNome();
 
 	/**
 	 * Retorna o caracter separador do atributo, caso este atributo estiver
@@ -23,7 +23,7 @@ public interface MetaAtributo {
 	 * 
 	 * @return caracter separador do atributo
 	 */
-	public char getCaracterSeparador();
+	char getCaracterSeparador();
 
 	/**
 	 * Recupera com qual atributo (documento/consulta/argumento) a linha está
@@ -42,7 +42,7 @@ public interface MetaAtributo {
 	 *            representa um argumento da aplicação.
 	 * @return atributo (documento/consulta/argumento) relacionado a linha
 	 */
-	public static <MetaAtr extends MetaAtributo> MetaAtributo getAtributo(String linha, Class<MetaAtr> clazz) {
+	static <MetaAtr extends MetaAtributo> MetaAtributo getAtributo(String linha, Class<MetaAtr> clazz) {
 		if (linha == null || linha.trim().isEmpty()) {
 			return null;
 		}

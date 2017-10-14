@@ -64,17 +64,10 @@ public class DocumentoOriginal implements Serializable {
 	 *         prático com os atributos deste documento
 	 */
 	public Documento toDocumento() {
-		verificarDocumento();
 		StringBuilder conteudo = new StringBuilder();
 		conteudo.append(author).append(' ').append(title).append(' ').append(source).append(' ').append(majorSubjects)
 				.append(' ').append(minorSubjects).append(' ').append(abstractExtract);
 		return new Documento(recordNumber, conteudo.toString());
-	}
-
-	public void verificarDocumento() {
-		if (recordNumber == null) {
-			System.out.println(this);
-		}
 	}
 
 	/**

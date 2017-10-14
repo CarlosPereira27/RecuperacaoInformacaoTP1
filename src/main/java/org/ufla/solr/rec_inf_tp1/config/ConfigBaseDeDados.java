@@ -4,20 +4,14 @@ import java.io.File;
 
 /**
  * Representação das configurações das base de dados (documentos/consultas).
- * Apenas indica os arquivos das bases de dados.
+ * Indica os arquivos das bases de dados. Utiliza o padrão de projeto singleton.
  * 
  * @author carlos
  * @author douglas
  * @author italo
  *
  */
-public abstract class ConfigBaseDeDados {
-
-	/**
-	 * Define o caminho dos arquivos com a base de dados dentro da máquina em
-	 * que está rodando o projeto.
-	 */
-	public static String caminhoAbsolutoCFC;
+public class ConfigBaseDeDados {
 
 	/**
 	 * Define o array com os nomes dos arquivos da base de dados de documentos.
@@ -25,28 +19,69 @@ public abstract class ConfigBaseDeDados {
 	private static final String[] ARQUIVOS_DOCUMENTOS = { "cf74", "cf75", "cf76", "cf77", "cf78", "cf79" };
 
 	/**
-	 * Recupera um determinado arquivo da base de dados de documentos.
-	 * 
-	 * @param indice
-	 *            índice do arquivo a ser recuperado.
-	 * @return arquivo da base de dados de documentos, ou null em caso de não
-	 *         existir documento com tal índice.
+	 * Define o nome do arquivo da base de dados do arquivo de consulta
 	 */
-	public static File getArquivoDocumento(int indice) {
-		if (indice < 0 || indice >= ARQUIVOS_DOCUMENTOS.length) {
-			return null;
-		}
-		return new File(caminhoAbsolutoCFC + File.separator + ARQUIVOS_DOCUMENTOS[indice]);
-	}
+	private static final String ARQUIVO_CONSULTA = "cfquery";
 
-	public static void setCaminhoAbslutoCFC(String caminhoAbsolutoCFC) {
-		ConfigBaseDeDados.caminhoAbsolutoCFC = caminhoAbsolutoCFC;
-		arquivoConsulta = new File(caminhoAbsolutoCFC + File.separator + "cfquery");
+	/**
+	 * Única instância de ConfigBaseDeDados da aplicação (Singleton)
+	 */
+	private static ConfigBaseDeDados configBaseDeDados;
+
+	/**
+	 * Define o diretório dos arquivos com a base de dados CFC.
+	 */
+	private String diretorioCFC;
+
+	/**
+	 * Construtor privado para implementação do padrão Singleton
+	 */
+	private ConfigBaseDeDados() {
+
 	}
 
 	/**
-	 * Arquivo da base de dados de consultas.
+	 * Retorna a única instância de ConfigBaseDeDados.
+	 * 
+	 * @return única instância de ConfigBaseDeDados
 	 */
-	public static File arquivoConsulta = new File(caminhoAbsolutoCFC + File.separator + "cfquery");
+	public static ConfigBaseDeDados getInstance() {
+		if (configBaseDeDados == null) {
+			configBaseDeDados = new ConfigBaseDeDados();
+		}
+		return configBaseDeDados;
+	}
+
+	/**
+	 * Recupera um determinado arquivo da base de dados CFC de documentos.
+	 * 
+	 * @param indice
+	 *            índice do arquivo a ser recuperado.
+	 * @return arquivo da base de dados CFC de documentos, ou null em caso de
+	 *         não existir documento com tal índice.
+	 */
+	public File getArquivoDocumento(int indice) {
+		if (indice < 0 || indice >= ARQUIVOS_DOCUMENTOS.length) {
+			return null;
+		}
+		return new File(diretorioCFC + File.separator + ARQUIVOS_DOCUMENTOS[indice]);
+	}
+
+	/**
+	 * Recupera o arquivo da base de dados CFC com as consultas.
+	 * 
+	 * @return arquivo da base de dados CFC com as consultas
+	 */
+	public File getArquivoConsulta() {
+		return new File(diretorioCFC + File.separator + ARQUIVO_CONSULTA);
+	}
+
+	public String getDiretorioCFC() {
+		return this.diretorioCFC;
+	}
+
+	public void setDiretorioCFC(String diretorioCFC) {
+		this.diretorioCFC = diretorioCFC;
+	}
 
 }

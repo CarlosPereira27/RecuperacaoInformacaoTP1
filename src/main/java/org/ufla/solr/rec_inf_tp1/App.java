@@ -5,6 +5,11 @@ import java.util.Locale;
 import org.ufla.solr.rec_inf_tp1.config.ConfigBaseDeDados;
 import org.ufla.solr.rec_inf_tp1.config.ConfigSolrClient;
 import org.ufla.solr.rec_inf_tp1.extrator.ExtratorConfiguracoes;
+import org.ufla.solr.rec_inf_tp1.func.AdicionarConfiguracao;
+import org.ufla.solr.rec_inf_tp1.func.ConsultaEAnaliseColecao;
+import org.ufla.solr.rec_inf_tp1.func.CriarColecao;
+import org.ufla.solr.rec_inf_tp1.func.DeletarColecao;
+import org.ufla.solr.rec_inf_tp1.func.PovoarColecao;
 import org.ufla.solr.rec_inf_tp1.model.AtributoGenerico;
 import org.ufla.solr.rec_inf_tp1.model.MetaArgumento;
 
@@ -18,7 +23,7 @@ import org.ufla.solr.rec_inf_tp1.model.MetaArgumento;
  */
 public class App {
 
-	private static final String HELP_MESSAGE = "\nOs comandos disponíveis são:\n"
+	private static final String MENSAGEM_AJUDA = "\nOs comandos disponíveis são:\n"
 			+ "java -jar recInfTP1.jar -cmd addConfig -zkhost <host_zoo_keeper> -zkp <porta_zoo_keepper> -conf <nome_configuracao> -dirconf <diretorio_configuracao>\n"
 			+ "java -jar recInfTP1.jar -cmd criarColecao -host <host> -p <porta> -c <colecao> -conf <nome_configuracao> -nshard <qtd_shards> -nReplicas <qtd_replicas>\n"
 			+ "java -jar recInfTP1.jar -cmd deletarColecao -host <host> -p <porta> -c <colecao>\n"
@@ -43,18 +48,27 @@ public class App {
 			+ "\nPara facilitar o uso dos parâmetros no programa, defina os parâmetros no arquivo de configuração.\n"
 			+ "O arquivo de configuração deve chamar 'config.prop', e deve seguir o padrão do arquivo de configuração exemplo.\n";
 
-	public static void displayHelpMessage() {
-		System.out.println(HELP_MESSAGE);
-	}
-
 	/**
 	 * Comando a ser executado.
 	 */
-	private static Comando cmd;
+	private Comando cmd;
+
 	/**
 	 * Arquivo de saída para relatórios.
 	 */
-	public static String arquivoSaida;
+	private String arquivoSaida;
+
+	/**
+	 * Configuração do Cliente Solr.
+	 */
+	private ConfigSolrClient configSolrClient;
+
+	/**
+	 * Mostra a mensagem de ajuda no console.
+	 */
+	private void mostrarMensagemAjuda() {
+		System.out.println(MENSAGEM_AJUDA);
+	}
 
 	/**
 	 * Define o valor de um argumento da aplicação.
@@ -62,7 +76,7 @@ public class App {
 	 * @param configuracao
 	 *            argumento e valor a ser definido o valor.
 	 */
-	private static void definirArgumento(AtributoGenerico configuracao) {
+	private void definirArgumento(AtributoGenerico configuracao) {
 		definirArgumento((MetaArgumento) configuracao.getAtributo(), configuracao.getValor());
 	}
 
@@ -74,7 +88,7 @@ public class App {
 	 * @param valor
 	 *            valor a ser definido
 	 */
-	private static void definirArgumento(MetaArgumento argumento, String valor) {
+	private void definirArgumento(MetaArgumento argumento, String valor) {
 		switch (argumento) {
 		case CMD:
 			cmd = Comando.getComando(valor);
@@ -84,14 +98,14 @@ public class App {
 			}
 			break;
 		case C:
-			ConfigSolrClient.colecao = valor;
+			configSolrClient.setColecao(valor);
 			break;
 		case HOST:
-			ConfigSolrClient.host = valor;
+			configSolrClient.setHost(valor);
 			break;
 		case P:
 			try {
-				ConfigSolrClient.porta = Integer.parseInt(valor);
+				configSolrClient.setPorta(Integer.parseInt(valor));
 			} catch (NumberFormatException e) {
 				erroDefinicaoDeNumero(valor, MetaArgumento.P.getNome());
 			}
@@ -100,34 +114,34 @@ public class App {
 			arquivoSaida = valor;
 			break;
 		case BD:
-			ConfigBaseDeDados.setCaminhoAbslutoCFC(valor);
+			ConfigBaseDeDados.getInstance().setDiretorioCFC(valor);
 			break;
 		case CONF:
-			ConfigSolrClient.configuracao = valor;
+			configSolrClient.setConfiguracao(valor);
 			break;
 		case N_SHARD:
 			try {
-				ConfigSolrClient.qtdShards = Integer.parseInt(valor);
+				configSolrClient.setQtdShards(Integer.parseInt(valor));
 			} catch (NumberFormatException e) {
 				erroDefinicaoDeNumero(valor, MetaArgumento.N_SHARD.getNome());
 			}
 			break;
 		case N_REPLICAS:
 			try {
-				ConfigSolrClient.qtdReplicas = Integer.parseInt(valor);
+				configSolrClient.setQtdReplicas(Integer.parseInt(valor));
 			} catch (NumberFormatException e) {
 				erroDefinicaoDeNumero(valor, MetaArgumento.N_REPLICAS.getNome());
 			}
 			break;
 		case DIR_CONF:
-			ConfigSolrClient.diretorioConfiguracao = valor;
+			configSolrClient.setDiretorioConfiguracao(valor);
 			break;
 		case ZK_HOST:
-			ConfigSolrClient.hostZooKeeper = valor;
+			configSolrClient.setHostZooKeeper(valor);
 			break;
 		case ZK_P:
 			try {
-				ConfigSolrClient.portaZooKeeper = Integer.parseInt(valor);
+				configSolrClient.setPortaZooKeeper(Integer.parseInt(valor));
 			} catch (NumberFormatException e) {
 				erroDefinicaoDeNumero(valor, MetaArgumento.ZK_P.getNome());
 			}
@@ -137,7 +151,16 @@ public class App {
 		}
 	}
 
-	private static void erroDefinicaoDeNumero(String valor, String argumento) {
+	/**
+	 * Exibe uma mensagem de erro da definição de um argumento do tipo número e
+	 * informa qual argumento resultou no erro. Por fim, finaliza a aplicação.
+	 * 
+	 * @param valor
+	 *            valor do argumento que gerou o erro
+	 * @param argumento
+	 *            argumenro que gerou o erro
+	 */
+	private void erroDefinicaoDeNumero(String valor, String argumento) {
 		System.out.println(String.format("Erro na definição do argumento %s! O valor não é um número inteiro (%s).\n",
 				argumento, valor));
 		System.exit(0);
@@ -146,7 +169,7 @@ public class App {
 	/**
 	 * Extraí as configurações do arquivo de configuração.
 	 */
-	private static void extrairConfiguracoes() {
+	private void extrairConfiguracoes() {
 		ExtratorConfiguracoes extratorConfiguracoes = new ExtratorConfiguracoes();
 		AtributoGenerico configuracao;
 		while ((configuracao = extratorConfiguracoes.proximaConfiguracao()) != null) {
@@ -157,23 +180,38 @@ public class App {
 		System.out.println("Fim da extração de configurações do arquivo de configurações.");
 	}
 
-	public static void main(String[] args) throws Exception {
-		// Definição de locale em inglês para imprimir corretamente ponto
-		// flutuando com o ponto sendo o divisor da parte inteira da
-		// fracionária.
+	/**
+	 * Definição de locale em inglês para imprimir corretamente ponto flutuando
+	 * com o ponto sendo o divisor da parte inteira da fracionária.
+	 */
+	private void setDefaultLocaleEnglish() {
 		Locale.setDefault(Locale.ENGLISH);
+	}
+
+	/**
+	 * Inicializa a aplicação. Define o Locale em inglês, cria a configuração do
+	 * cliente Solr e extrair configurações do arquivo de configurações.
+	 */
+	private void init() {
+		setDefaultLocaleEnglish();
+		configSolrClient = ConfigSolrClient.getInstance();
 		extrairConfiguracoes();
+	}
+
+	public static void main(String[] args) throws Exception {
+		App app = new App();
+		app.init();
 		if (args.length == 1) {
 			MetaArgumento argumento = MetaArgumento.getArgumento(args[0]);
 			if (!(MetaArgumento.H.equals(argumento) || MetaArgumento.HELP.equals(argumento))) {
 				System.out.println("Argumento não reconhecido!\n\n");
 			}
-			displayHelpMessage();
+			app.mostrarMensagemAjuda();
 			System.exit(0);
 		}
 		if (args.length % 2 == 1) {
 			System.out.println("Quantidade de argumentos errada!\n\n");
-			displayHelpMessage();
+			app.mostrarMensagemAjuda();
 			System.exit(0);
 		}
 		for (int i = 0; i < args.length; i += 2) {
@@ -182,24 +220,24 @@ public class App {
 				System.out.println(String.format("Argumento (%s) não reconhecido!\n\n", args[i]));
 				System.exit(0);
 			}
-			definirArgumento(argumento, args[i + 1]);
+			app.definirArgumento(argumento, args[i + 1]);
 		}
-		if (cmd == null) {
+		if (app.cmd == null) {
 			System.out.println("Comando não definido!\n\n");
 			System.exit(0);
 		}
 
-		switch (cmd) {
+		switch (app.cmd) {
 		case POVOAR_COLECAO:
 			PovoarColecao povoarColecao = new PovoarColecao();
 			povoarColecao.povoar();
 			break;
 		case CONSULTAS_E_RELATORIO:
 			ConsultaEAnaliseColecao consultaEAnaliseColecao = new ConsultaEAnaliseColecao();
-			if (arquivoSaida == null) {
+			if (app.arquivoSaida == null) {
 				consultaEAnaliseColecao.setWriter(System.out);
 			} else {
-				consultaEAnaliseColecao.setWriter(arquivoSaida);
+				consultaEAnaliseColecao.setWriter(app.arquivoSaida);
 			}
 			consultaEAnaliseColecao.executar();
 			break;
