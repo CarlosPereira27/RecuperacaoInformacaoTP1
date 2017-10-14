@@ -24,10 +24,10 @@ java -jar recInfTP1.jar -cmd criarColecao -host <host> -p <porta> -c <colecao> -
 java -jar recInfTP1.jar -cmd deletarColecao -host <host> -p <porta> -c <colecao>
 ```
 ```
-java -jar recInfTP1.jar -cmd povoarColecao -host <host> -p <porta> -c <colecao> -bd <baseCFC>
+java -jar recInfTP1.jar -cmd povoarColecao -host <host> -p <porta> -c <colecao> -bd <baseCFC> -preproc <pre-processamento>
 ```
 ```
-java -jar recInfTP1.jar -cmd consultasERelatorio -host <host> -p <porta> -c <colecao> -bd <baseCFC> -out <arquivo>
+java -jar recInfTP1.jar -cmd consultasERelatorio -host <host> -p <porta> -c <colecao> -bd <baseCFC> -out <arquivo> -preproc <pre-processamento>
 ```
 
 Parâmetros da aplicação:
@@ -43,6 +43,7 @@ Parâmetros da aplicação:
 * ```-dirconf <endereco_configuracao>``` &rarr; define o diretório de uma determinada configuração {addConf}
 * ```-zkhost <host_zoo_keeper>``` &rarr;  define o _host_ da aplicação _Solr ZooKeeper_ {addConf}. O padrão é localhost.
 * ```-zkp <porta_zoo_keepper>``` &rarr; define a porta do _host_ da aplicação _Solr ZooKeeper_ {addConf}. O padrão é 9983.
+* ```-preproc <pre-processamento>``` &rarr; define se deverá utilizar o módulo de pré-processamento implementado neste projeto, valores possíveis: [nao, sim]. Em caso do valor for igual a sim usará o módulo de pré-processamento, caso contrário não. O padrão é sim.
 * ```-h``` ou ```-help``` &rarr; mostra a mensagem de ajuda.
 
 Para facilitar o uso dos parâmetros no programa, defina os parâmetros no arquivo de configuração.

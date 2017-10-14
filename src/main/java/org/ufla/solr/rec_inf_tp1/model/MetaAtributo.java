@@ -79,6 +79,9 @@ public interface MetaAtributo {
 		if (linha.startsWith(MetaArgumento.HOST.getNome())) {
 			return MetaArgumento.HOST;
 		}
+		if (linha.startsWith(MetaArgumento.PRE_PROC.getNome())) {
+			return MetaArgumento.PRE_PROC;
+		}
 		return null;
 	}
 }

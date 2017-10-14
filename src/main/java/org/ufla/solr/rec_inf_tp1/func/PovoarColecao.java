@@ -11,6 +11,7 @@ import org.ufla.solr.rec_inf_tp1.config.ConfigSolrClient;
 import org.ufla.solr.rec_inf_tp1.extrator.ExtratorDocumentos;
 import org.ufla.solr.rec_inf_tp1.model.Documento;
 import org.ufla.solr.rec_inf_tp1.model.MetaAtributoDocumento;
+import org.ufla.solr.rec_inf_tp1.preprocessing.PreProcessamento;
 
 /**
  * Responsável por criar os campos no schema do Solr e adicionar os documentos
@@ -45,7 +46,8 @@ public class PovoarColecao {
 		FabricaCampos fabricaCampos = new FabricaCampos();
 		try {
 			System.out.printf("\nAdicionando os campos '%s' e '%s' na coleção '%s'.\n\n",
-					MetaAtributoDocumento.RN.getNome(), MetaAtributoDocumento.CONT.getNome(), configSolrClient.getColecao());
+					MetaAtributoDocumento.RN.getNome(), MetaAtributoDocumento.CONT.getNome(),
+					configSolrClient.getColecao());
 			solr.deleteByQuery("*:*");
 			solr.request(new SchemaRequest.AddField(fabricaCampos.criarCampoCONT()));
 			solr.request(new SchemaRequest.AddField(fabricaCampos.criarCampoRN()));
@@ -79,8 +81,8 @@ public class PovoarColecao {
 		try {
 			System.out.printf(
 					"\nDeletando todos documentos contidos na coleção '%s'.\nDeletando os campos '%s' e '%s' da coleção '%s' se existir. Pois, estes campos serão configurados para serem usados\n",
-					configSolrClient.getColecao(), MetaAtributoDocumento.RN.getNome(), MetaAtributoDocumento.CONT.getNome(),
-					configSolrClient.getColecao());
+					configSolrClient.getColecao(), MetaAtributoDocumento.RN.getNome(),
+					MetaAtributoDocumento.CONT.getNome(), configSolrClient.getColecao());
 			solr.deleteByQuery("*:*");
 			deletaCampos(solr);
 			System.out.println("Commit -> " + solr.commit());
@@ -113,6 +115,9 @@ public class PovoarColecao {
 		Documento documento;
 
 		while ((documento = extratorDocumentos.proximoDocumento()) != null) {
+			if (configSolrClient.getPreProcessamento()) {
+				documento.setConteudo(PreProcessamento.processText(documento.getConteudo()));
+			}
 			solr.add(documento.toSolrInputDocument());
 		}
 

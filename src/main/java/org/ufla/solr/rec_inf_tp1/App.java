@@ -27,8 +27,8 @@ public class App {
 			+ "java -jar recInfTP1.jar -cmd addConfig -zkhost <host_zoo_keeper> -zkp <porta_zoo_keepper> -conf <nome_configuracao> -dirconf <diretorio_configuracao>\n"
 			+ "java -jar recInfTP1.jar -cmd criarColecao -host <host> -p <porta> -c <colecao> -conf <nome_configuracao> -nshard <qtd_shards> -nReplicas <qtd_replicas>\n"
 			+ "java -jar recInfTP1.jar -cmd deletarColecao -host <host> -p <porta> -c <colecao>\n"
-			+ "java -jar recInfTP1.jar -cmd povoarColecao -host <host> -p <porta> -c <colecao> -bd <baseCFC>\n"
-			+ "java -jar recInfTP1.jar -cmd consultasERelatorio -host <host> -p <porta> -c <colecao> -bd <baseCFC> -out <arquivo>\n"
+			+ "java -jar recInfTP1.jar -cmd povoarColecao -host <host> -p <porta> -c <colecao> -bd <baseCFC> -preproc <pre-processamento>\n"
+			+ "java -jar recInfTP1.jar -cmd consultasERelatorio -host <host> -p <porta> -c <colecao> -bd <baseCFC> -out <arquivo> -preproc <pre-processamento>\n"
 
 			+ "\nParâmetros do programa:\n"
 			+ "-cmd <arg> -> comando a ser realizado (obrigatório), argumentos suportados: [addConf, criarColecao, deletarColecao, povoarColecao, consultasERelatorio]\n"
@@ -43,6 +43,7 @@ public class App {
 			+ "-dirconf <diretorio_configuracao> -> define o diretório de uma determinada configuração {addConf}\n"
 			+ "-zkhost <host_zoo_keeper> ->  define o host da aplicação Solr ZooKeeper {addConf}, o padrão é localhost\n"
 			+ "-zkp <porta_zoo_keepper> -> define a porta do host da aplicação Solr ZooKeeper {addConf},o padrão é 9983\n"
+			+ "-preproc <pre-processamento> -> define se deverá utilizar o módulo de pré-processamento implementado neste projeto, valores possíveis: [nao, sim]. Em caso do valor for igual a sim usará o módulo de pré-processamento, caso contrário não. O padrão é sim.\n"
 			+ "-h ou -help -> mostra a mensagem de ajuda\n"
 
 			+ "\nPara facilitar o uso dos parâmetros no programa, defina os parâmetros no arquivo de configuração.\n"
@@ -145,6 +146,9 @@ public class App {
 			} catch (NumberFormatException e) {
 				erroDefinicaoDeNumero(valor, MetaArgumento.ZK_P.getNome());
 			}
+			break;
+		case PRE_PROC:
+			configSolrClient.setPreProcessamento(valor);
 			break;
 		default:
 			break;

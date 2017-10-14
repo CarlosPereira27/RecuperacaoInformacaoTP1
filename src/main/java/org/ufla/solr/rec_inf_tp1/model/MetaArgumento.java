@@ -24,6 +24,7 @@ public enum MetaArgumento implements MetaAtributo {
 	DIR_CONF("-dirconf"),
 	ZK_HOST("-zkhost"),
 	ZK_P("-zkp"),
+	PRE_PROC("-preproc"),
 	CONT_DEF_ATR("CONSTANTE_PARA_FUNCIONAR_EXTRATOR");
 
 	/**

@@ -22,6 +22,7 @@ import org.ufla.solr.rec_inf_tp1.extrator.ExtratorConsultas;
 import org.ufla.solr.rec_inf_tp1.metrica.MetricaPrecisaoRevocacao;
 import org.ufla.solr.rec_inf_tp1.model.Consulta;
 import org.ufla.solr.rec_inf_tp1.model.MetaAtributoDocumento;
+import org.ufla.solr.rec_inf_tp1.preprocessing.PreProcessamento;
 
 /**
  * Responsável por consultar os documentos na coleção definida no Solr e
@@ -130,6 +131,9 @@ public class ConsultaEAnaliseColecao {
 		Relatorio relatorio = new Relatorio(bw);
 
 		while ((consulta = extratorConsultas.proximaConsulta()) != null) {
+			if (configSolrClient.getPreProcessamento()) {
+				consulta.setQueryText(PreProcessamento.processText(consulta.getQueryText()));
+			}
 			List<Integer> documentosRecuperados = consultar(solr, consulta);
 			MetricaPrecisaoRevocacao metrica = new MetricaPrecisaoRevocacao(consulta.getDocumentosRelevantes(),
 					documentosRecuperados);

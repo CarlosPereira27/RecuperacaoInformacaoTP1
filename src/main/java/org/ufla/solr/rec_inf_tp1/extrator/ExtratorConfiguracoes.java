@@ -79,6 +79,7 @@ public class ExtratorConfiguracoes extends ExtratorGenerico {
 			}
 			indiceAtr = indiceAtribuicao(configuracao.getValor());
 			if (indiceAtr == -1) {
+				System.out.println(configuracao.getValor());
 				System.out.println(String.format(
 						"Problema encontrado na linha %d do arquivo de configuração, linha abaixo:\n\"%s\"\n",
 						numLinhaAtual - 1, getLinha(configuracao)));

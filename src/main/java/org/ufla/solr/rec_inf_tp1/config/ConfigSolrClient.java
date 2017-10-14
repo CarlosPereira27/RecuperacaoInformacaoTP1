@@ -70,10 +70,32 @@ public class ConfigSolrClient {
 	private Integer portaZooKeeper;
 
 	/**
+	 * Define se deverá utilizar as implementações de pré-processamento contidas
+	 * neste projeto.
+	 */
+	private Boolean preProcessamento = true;
+
+	/**
+	 * Valor sim do pré-processamento
+	 */
+	private static final String PRE_PROCESSAMENTO_SIM = "SIM";
+
+	/**
 	 * Construtor privado para implementação do padrão Singleton
 	 */
 	private ConfigSolrClient() {
 
+	}
+
+	/**
+	 * Define se deve ter o pré-processamento implementado neste projeto ou não.
+	 * 
+	 * @param preProcessamento
+	 *            string com valor [sim, nao] informando se deve ter
+	 *            pré-processamento ou não
+	 */
+	public void setPreProcessamento(String preProcessamento) {
+		this.preProcessamento = PRE_PROCESSAMENTO_SIM.startsWith(preProcessamento);
 	}
 
 	/**
@@ -229,6 +251,14 @@ public class ConfigSolrClient {
 
 	public void setPortaZooKeeper(Integer portaZooKeeper) {
 		this.portaZooKeeper = portaZooKeeper;
+	}
+
+	public Boolean getPreProcessamento() {
+		return preProcessamento;
+	}
+
+	public void setPreProcessamento(Boolean preProcessamento) {
+		this.preProcessamento = preProcessamento;
 	}
 
 }
