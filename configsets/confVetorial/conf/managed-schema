@@ -296,40 +296,54 @@
          removes English stop words (lang/stopwords_en.txt), down cases, protects words from protwords.txt, and
          finally applies Porter's stemming.  The query time analyzer also applies synonyms from synonyms.txt. -->
     <dynamicField name="*_txt_en" type="text_en"  indexed="true"  stored="true"/>
+       <!-- solr.TextField é o tipo básico para análise de texto configurável. -->
     <fieldType name="text_en" class="solr.TextField" positionIncrementGap="100">
       <analyzer type="index">
-        <tokenizer class="solr.StandardTokenizerFactory"/>
-        <!-- in this example, we will only use synonyms at query time
-        <filter class="solr.SynonymGraphFilterFactory" synonyms="index_synonyms.txt" ignoreCase="true" expand="false"/>
-        <filter class="solr.FlattenGraphFilterFactory"/>
+        <!-- solr.StandardTokenizer: Este tokenizer divide o campo de texto em tokens, 
+                tratando espaços em branco e pontuação como delimitadores. 
+                Os caracteres do delimitadores são descartados 
         -->
-        <!-- Case insensitive stop word removal.
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+
+        <!-- solr.StopFilterFactory: Este filtro remove os tokens que estão na lista de stopwords.
         -->
         <filter class="solr.StopFilterFactory"
                 ignoreCase="true"
                 words="lang/stopwords_en.txt"
             />
+
+        <!-- solr.LowerCaseFilterFactory: Este filtro converte as letras maiúsculas de um token para minúsculas.
+        -->
         <filter class="solr.LowerCaseFilterFactory"/>
+
         <filter class="solr.EnglishPossessiveFilterFactory"/>
-        <filter class="solr.KeywordMarkerFilterFactory" protected="protwords.txt"/>
-        <!-- Optionally you may want to use this less aggressive stemmer instead of PorterStemFilterFactory:
-        <filter class="solr.EnglishMinimalStemFilterFactory"/>
-	      -->
+
+        <!-- solr.PorterStemFilterFactory: Este filtro aplica o Algoritmo de Stemming de Porter para Inglês.
+        -->
         <filter class="solr.PorterStemFilterFactory"/>
       </analyzer>
       <analyzer type="query">
+        <!-- solr.StandardTokenizer: Este tokenizer divide o campo de texto em tokens, 
+                tratando espaços em branco e pontuação como delimitadores. 
+                Os caracteres do delimitadores são descartados 
+        -->
         <tokenizer class="solr.StandardTokenizerFactory"/>
-        <filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
+
+        <!-- solr.StopFilterFactory: Este filtro remove os tokens que estão na lista de stopwords.
+        -->
         <filter class="solr.StopFilterFactory"
                 ignoreCase="true"
                 words="lang/stopwords_en.txt"
-        />
+            />
+
+        <!-- solr.LowerCaseFilterFactory: Este filtro converte as letras maiúsculas de um token para minúsculas.
+        -->
         <filter class="solr.LowerCaseFilterFactory"/>
+
         <filter class="solr.EnglishPossessiveFilterFactory"/>
-        <filter class="solr.KeywordMarkerFilterFactory" protected="protwords.txt"/>
-        <!-- Optionally you may want to use this less aggressive stemmer instead of PorterStemFilterFactory:
-        <filter class="solr.EnglishMinimalStemFilterFactory"/>
-	      -->
+
+        <!-- solr.PorterStemFilterFactory: Este filtro aplica o Algoritmo de Stemming de Porter para Inglês.
+        -->
         <filter class="solr.PorterStemFilterFactory"/>
       </analyzer>
     </fieldType>
@@ -940,7 +954,10 @@
      </similarity>
     -->
 
-	<!-- Fábrica de instâncias da classe que implementa o modelo vetorial no Apache Solr, a classe que implementa o modelo chama ClassicSimilarity e a sua interface chama TFIDFSimilarity-->
+   <!-- Fábrica de instâncias da classe que implementa o modelo vetorial no Apache Solr, 
+         a classe que implementa o modelo chama ClassicSimilarity 
+         e a sua interface chama TFIDFSimilarity
+   -->
    <similarity class="solr.ClassicSimilarityFactory">
    </similarity>
 

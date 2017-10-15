@@ -6,7 +6,9 @@ import org.apache.solr.common.SolrInputDocument;
 
 /**
  * Documento formatado da forma definida para o trabalho prático de Recuperação
- * da Informação.
+ * da Informação. Representa um documento da base de dados CFC utilizando um
+ * atributo que é o resultado da concatenação dos termos contidos nos atributos
+ * AU, TI, SO, MJ, MN e AB/EX.
  * 
  * @author carlos
  * @author douglas

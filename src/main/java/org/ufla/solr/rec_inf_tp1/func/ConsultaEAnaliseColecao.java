@@ -25,8 +25,9 @@ import org.ufla.solr.rec_inf_tp1.model.MetaAtributoDocumento;
 import org.ufla.solr.rec_inf_tp1.preprocessing.PreProcessamento;
 
 /**
- * Responsável por consultar os documentos na coleção definida no Solr e
- * analisar o resultado.
+ * Responsável por realizar as consultas, definidas na base de dados CFC, na
+ * coleção definida no Solr Cloud, analisar o resultado e gerar o relatório
+ * (planilha e gráficos).
  * 
  * @author carlos
  * @author douglas

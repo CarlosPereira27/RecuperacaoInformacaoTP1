@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema name="default-config" version="1.6">
+
+    <!-- Configuração de filtros de campo (modelos vetorial e BM25) -->
+
+    <dynamicField name="*_txt_en" type="text_en"  indexed="true"  stored="true"/>
+       <!-- solr.TextField é o tipo básico para análise de texto configurável. -->
+    <fieldType name="text_en" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <!-- solr.StandardTokenizer: Este tokenizer divide o campo de texto em tokens, 
+                tratando espaços em branco e pontuação como delimitadores. 
+                Os caracteres do delimitadores são descartados 
+        -->
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+
+        <!-- solr.StopFilterFactory: Este filtro remove os tokens que estão na lista de stopwords.
+        -->
+        <filter class="solr.StopFilterFactory"
+                ignoreCase="true"
+                words="lang/stopwords_en.txt"
+            />
+
+        <!-- solr.LowerCaseFilterFactory: Este filtro converte as letras maiúsculas de um token para minúsculas.
+        -->
+        <filter class="solr.LowerCaseFilterFactory"/>
+
+        <filter class="solr.EnglishPossessiveFilterFactory"/>
+
+        <!-- solr.PorterStemFilterFactory: Este filtro aplica o Algoritmo de Stemming de Porter para Inglês.
+        -->
+        <filter class="solr.PorterStemFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <!-- solr.StandardTokenizer: Este tokenizer divide o campo de texto em tokens, 
+                tratando espaços em branco e pontuação como delimitadores. 
+                Os caracteres do delimitadores são descartados 
+        -->
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+
+        <!-- solr.StopFilterFactory: Este filtro remove os tokens que estão na lista de stopwords.
+        -->
+        <filter class="solr.StopFilterFactory"
+                ignoreCase="true"
+                words="lang/stopwords_en.txt"
+            />
+
+        <!-- solr.LowerCaseFilterFactory: Este filtro converte as letras maiúsculas de um token para minúsculas.
+        -->
+        <filter class="solr.LowerCaseFilterFactory"/>
+
+        <filter class="solr.EnglishPossessiveFilterFactory"/>
+
+        <!-- solr.PorterStemFilterFactory: Este filtro aplica o Algoritmo de Stemming de Porter para Inglês.
+        -->
+        <filter class="solr.PorterStemFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+
+
+   <!-- Configuração de fábrica de função de similaridade - modelo vetorial -->
+
+   <!-- Fábrica de instâncias da classe que implementa o modelo vetorial no Apache Solr, 
+         a classe que implementa o modelo chama ClassicSimilarity 
+         e a sua interface chama TFIDFSimilarity
+   -->
+   <similarity class="solr.ClassicSimilarityFactory">
+   </similarity>
+
+
+
+   <!-- Configuração de fábrica de função de similaridade - modelo vetorial -->
+
+   <!-- Fábrica de instâncias da classe que implementa o modelo BM25 no Apache Solr, 
+        a classe que implementa o modelo chama BM25Similarity
+   -->
+   <similarity class="solr.BM25SimilarityFactory">
+   </similarity>
+
+</schema>

@@ -7,6 +7,8 @@ import org.ufla.solr.rec_inf_tp1.utils.StringUtils;
 
 /**
  * Documento da forma original em que é extraído da base de dados estática.
+ * Representa um documento da base de dados CFC utilizando a estrutura definida
+ * na própria CFC. Utilizando todos os seus atributos de forma separada.
  * 
  * @author carlos
  * @author douglas

@@ -73,7 +73,7 @@ public class ConfigSolrClient {
 	 * Define se deverá utilizar as implementações de pré-processamento contidas
 	 * neste projeto.
 	 */
-	private Boolean preProcessamento = true;
+	private boolean preProcessamento = true;
 
 	/**
 	 * Valor sim do pré-processamento
@@ -253,11 +253,11 @@ public class ConfigSolrClient {
 		this.portaZooKeeper = portaZooKeeper;
 	}
 
-	public Boolean getPreProcessamento() {
+	public boolean getPreProcessamento() {
 		return preProcessamento;
 	}
 
-	public void setPreProcessamento(Boolean preProcessamento) {
+	public void setPreProcessamento(boolean preProcessamento) {
 		this.preProcessamento = preProcessamento;
 	}
 

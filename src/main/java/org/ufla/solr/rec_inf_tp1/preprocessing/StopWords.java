@@ -23,6 +23,7 @@ public class StopWords {
 			StringTokenizer token = new StringTokenizer(line, " ");
 			StpWords.add(token.nextToken());
 		}
+		in.close();
 		return StpWords;
 	}
 

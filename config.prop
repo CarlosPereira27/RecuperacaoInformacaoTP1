@@ -7,17 +7,18 @@
 # A configuração passada por parâmetro sobrescreve o valor da configuração definida neste arquivo.
 # 
 # -cmd <arg> -> comando a ser realizado (obrigatório), argumentos suportados: [addConf, criarColecao, deletarColecao, povoarColecao, consultasERelatorio]
-# -host <host> -> define o host da aplicação Solr, o padrão é localhost
-# -p <porta> -> define a porta do host da aplicação Solr,o padrão é 8983
-# -c <colecao> -> define a coleção utilizada
-# -bd <baseCFC> -> define ocaminho para a base de dados CFC
-# -out <arquivo> -> define o arquivo para salvar o relatório {consultasERelatorio}
-# -conf <nome_configuracao> -> define o nome da configuração utilizada na coleção {criarColecao, addConf}, o padrão é _default
-# -nshard <qtd_shards> -> define a quantidade de shards da coleção {criarColecao}, o padrão é 2
-# -nreplicas <qtd_replicas> -> define a quantidade de réplicas da coleção {criarColecao}, o padrão é 2
-# -dirconf <endereco_configuracao> -> define o diretório de uma determinada configuração {addConf}
-# -zkhost <host_zoo_keeper> ->  define o host da aplicação Solr ZooKeeper {addConf}, o padrão é localhost
-# -zkp <porta_zoo_keepper> -> define a porta do host da aplicação Solr ZooKeeper {addConf},o padrão é 9983
+# -host <host> -> define o host da aplicação Solr Cloud. O padrão é localhost.
+# -p <porta> -> define a porta do host da aplicação Solr Cloud. O padrão é 8983.
+# -c <colecao> -> define a coleção utilizada.
+# -bd <baseCFC> -> define ocaminho para a base de dados CFC.
+# -out <arquivo> -> define o arquivo para salvar o relatório {consultasERelatorio}.
+# -conf <nome_configuracao> -> define o nome da configuração utilizada na coleção {criarColecao, addConf}. O padrão é _default
+# -nshard <qtd_shards> -> define a quantidade de shards da coleção {criarColecao}. O padrão é 2
+# -nreplicas <qtd_replicas> -> define a quantidade de réplicas da coleção {criarColecao}. O padrão é 2.
+# -dirconf <endereco_configuracao> -> define o diretório de uma determinada configuração {addConf}.
+# -zkhost <host_zoo_keeper> ->  define o host da aplicação Solr Cloud ZooKeeper {addConf}. O padrão é localhost.
+# -zkp <porta_zoo_keepper> -> define a porta do host da aplicação Solr Cloud ZooKeeper {addConf}. O padrão é 9983.
+# -preproc <pre-processamento> -> define se deverá utilizar o módulo de pré-processamento implementado neste projeto, valores possíveis: [nao, sim]. Em caso do valor for igual a sim usará o módulo de pré-processamento, caso contrário não. O padrão é sim.
 
 -host = localhost
 -p = 8983

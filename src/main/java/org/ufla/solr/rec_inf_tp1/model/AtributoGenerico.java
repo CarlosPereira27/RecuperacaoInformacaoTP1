@@ -3,8 +3,8 @@ package org.ufla.solr.rec_inf_tp1.model;
 import java.io.Serializable;
 
 /**
- * Define um atributo genérico, possuindo campos para definir qual é este
- * atributo (metadado/nome) e qual o seu valor.
+ * Define um atributo de forma genérica, possuindo campos para definir qual é
+ * este atributo (metadado/nome) e qual o seu valor.
  * 
  * @author carlos
  * @author douglas
