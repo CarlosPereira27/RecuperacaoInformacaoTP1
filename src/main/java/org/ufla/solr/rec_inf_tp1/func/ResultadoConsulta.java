@@ -55,7 +55,8 @@ public class ResultadoConsulta {
 			bw.write(String.format("%.2f,%.2f\n", ponto.revocacao, ponto.precisao));
 		}
 
-		bw.write("\nTabela\nRevocação,Precisão\n");
+		bw.write(String.format("Tabela,%.2f\n", tabela.getArea()));
+		bw.write("Revocação,Precisão\n");
 		for (int j = 0; j < TabelaPrecisaoRevocacao.QTD_NIVEIS_REVOCACAO; j++) {
 			bw.write(
 					String.format("%.2f,%.2f\n", TabelaPrecisaoRevocacao.NIVEIS_REVOCACAO[j], tabela.getPrecisao()[j]));

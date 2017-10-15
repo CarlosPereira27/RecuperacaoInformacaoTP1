@@ -45,6 +45,21 @@ public class TabelaPrecisaoRevocacao {
 		this.precisao[nivelRevocacao] = precisao;
 	}
 
+	/**
+	 * Retorna a área abaixo do gráfico.
+	 * 
+	 * @return área abaixo do gráfico.
+	 */
+	public double getArea() {
+		Ponto[] pontos = new Ponto[13];
+		pontos[0] = new Ponto(0, 0);
+		for (int i = 0; i < QTD_NIVEIS_REVOCACAO; i++) {
+			pontos[i + 1] = new Ponto(NIVEIS_REVOCACAO[i], precisao[i]);
+		}
+		pontos[12] = new Ponto(100, 0);
+		return AreaPoligono.areaPoligono(pontos);
+	}
+
 	public double[] getPrecisao() {
 		return precisao;
 	}

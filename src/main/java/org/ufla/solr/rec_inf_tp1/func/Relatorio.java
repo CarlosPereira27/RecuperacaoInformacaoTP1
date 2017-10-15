@@ -72,7 +72,7 @@ public class Relatorio {
 	public void gerarRelatorio() throws IOException {
 		TabelaPrecisaoRevocacao tabelaMedia = MetricaPrecisaoRevocacao.calcularTabelaMedia(getTabelas());
 
-		bw.write("Tabela Média\n");
+		bw.write(String.format("Tabela Média,%.2f\n", tabelaMedia.getArea()));
 		bw.write("Revocação,Precisão\n");
 		for (int i = 0; i < TabelaPrecisaoRevocacao.QTD_NIVEIS_REVOCACAO; i++) {
 			bw.write(String.format("%.2f,%.2f\n", TabelaPrecisaoRevocacao.NIVEIS_REVOCACAO[i],

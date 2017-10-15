@@ -5,8 +5,8 @@ import java.io.IOException;
 import org.ufla.solr.rec_inf_tp1.utils.StringUtils;
 
 /**
- * Responsável por executar a aplicação Python que gera os gráficos para os
- * resultados obtidos nesta aplicação.
+ * Responsável por executar a aplicação Python gerarGraficos.py, que gera os
+ * gráficos para os resultados obtidos nesta aplicação.
  * 
  * @author carlos
  *

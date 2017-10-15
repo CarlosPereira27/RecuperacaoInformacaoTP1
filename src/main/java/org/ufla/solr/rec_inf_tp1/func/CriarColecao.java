@@ -9,7 +9,7 @@ import org.apache.solr.common.util.NamedList;
 import org.ufla.solr.rec_inf_tp1.config.ConfigSolrClient;
 
 /**
- * Responsável por criar uma determinada coleção da aplicação Solr.
+ * Responsável por criar uma determinada coleção da aplicação Solr Cloud.
  * 
  * @author carlos
  * @author douglas

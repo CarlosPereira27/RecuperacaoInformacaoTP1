@@ -14,8 +14,9 @@ import org.ufla.solr.rec_inf_tp1.model.MetaAtributoDocumento;
 import org.ufla.solr.rec_inf_tp1.preprocessing.PreProcessamento;
 
 /**
- * Responsável por criar os campos no schema do Solr e adicionar os documentos
- * na coleção definida no Solr.
+ * Responsável por primeiramente limpar a coleção. E então criar os campos no
+ * schema do Solr Cloud e adicionar os documentos da base de dados CFC na
+ * coleção definida no Solr Cloud.
  * 
  * @author carlos
  * @author douglas

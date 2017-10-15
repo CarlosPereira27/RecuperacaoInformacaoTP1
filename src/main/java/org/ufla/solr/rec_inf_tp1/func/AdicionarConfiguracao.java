@@ -6,7 +6,7 @@ import org.apache.solr.common.cloud.SolrZkClient;
 import org.ufla.solr.rec_inf_tp1.config.ConfigSolrClient;
 
 /**
- * Responsável por adicionar uma configuração no Solr usando o Solr ZooKeeper.
+ * Responsável por adicionar uma configuração no Solr Cloud utilizando o Solr Cloud ZooKeeper.
  * 
  * @author carlos
  * @author douglas
