@@ -1,4 +1,4 @@
-# RecuperacaoInformacaoTP1
+# Trabalho Prático 1 - Recuperação de Informação
 Trabalho Prático 1 da disciplina Recuperação de Informação (DCC-UFLA). 
 
 Todos os comandos dessa aplicação dependem de que o _Solr Cloud_ esteja executando na máquina.
