@@ -186,6 +186,7 @@ def main(argv):
 	criarDiretorio(diretorioStr + "svg/");
 	criarDiretorio(diretorioStr + "png/titulo/");
 	criarDiretorio(diretorioStr + "svg/titulo/");
+	arq = arqNome;
 	if arquivoSaida != '':
 		index = arquivoSaida.rfind('/');
 		diretorioStr = arquivoSaida[:index+1];
