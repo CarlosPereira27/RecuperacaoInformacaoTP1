@@ -190,7 +190,7 @@ def main(argv):
 	if arquivoSaida != '':
 		index = arquivoSaida.rfind('/');
 		diretorioStr = arquivoSaida[:index+1];
-		arq = arquivoSaida[index+1:] + arq
+		arq = arquivoSaida[index+1:]
 		criarDiretorio(diretorioStr);
 		criarDiretorio(diretorioStr + "png/");
 		criarDiretorio(diretorioStr + "svg/");
