@@ -150,6 +150,9 @@ public class App {
 		case PRE_PROC:
 			configSolrClient.setPreProcessamento(valor);
 			break;
+		case TIT_GRAF:
+			configSolrClient.setTituloGrafico(valor);
+			break;
 		default:
 			break;
 		}

@@ -9,7 +9,7 @@ Há 5 comandos disponíveis nesta aplicação:
 * criarColecao - este comando cria uma coleção com as informações da coleção determinadas pelo usuário (argumentos _-c_, _-conf_, _-nshard_, _-nreplicas_)
 * deletarColecao - este comando deleta uma coleção da aplicação _Solr Cloud_ (argumento _-c_)
 * povoarColecao - este comando povoa uma coleção determinada pelo usuário com a base de dados CFC. O usuário deve ter no sua máquina a base CFC, e informar a endereço desta base de dados com o argumento _-bd_. Este projeto possui um diretório cfc com a base de dados CFC.
-* consultasERelatorio - este comando realiza consultas em uma base de dados determinada pelo usuário (argumento _-c_). Esta base de dados deve estar povoada pela base CFC. As consultas realizadas estão definidas na base CFC, portanto o usuário deve informar o endereço desta base (argumento _-bd_). O relatório é gerado em um arquivo informado pelo usuário (argumento _-out_).
+* consultasERelatorio - este comando realiza consultas em uma base de dados determinada pelo usuário (argumento _-c_). Esta base de dados deve estar povoada pela base CFC. As consultas realizadas estão definidas na base CFC, portanto o usuário deve informar o endereço desta base (argumento _-bd_). O relatório é gerado em um arquivo informado pelo usuário (argumento _-out_). O usuário pode informar o título do gráfico gerado com o argumento _-titgraf_.
 
 **IMPORTANTE** - todos os comandos, exceto _addConfig_, possuem os argumentos _-host_ e _-p_ que determinam o _host_ e a porta onde o _Solr Cloud_ está executando respectivamente. O comando _addConfig_ possui em vez dos argumentos _-host_ e _-p_, os argumentos _-zkhost_ e _-zkp_ que determinam o _host_ e a porta onde o _Solr Cloud ZooKeeper_ está executando respectivamente.
 
@@ -27,7 +27,7 @@ java -jar recInfTP1.jar -cmd deletarColecao -host <host> -p <porta> -c <colecao>
 java -jar recInfTP1.jar -cmd povoarColecao -host <host> -p <porta> -c <colecao> -bd <baseCFC> -preproc <pre-processamento>
 ```
 ```
-java -jar recInfTP1.jar -cmd consultasERelatorio -host <host> -p <porta> -c <colecao> -bd <baseCFC> -out <arquivo> -preproc <pre-processamento>
+java -jar recInfTP1.jar -cmd consultasERelatorio -host <host> -p <porta> -c <colecao> -bd <baseCFC> -out <arquivo> -preproc <pre-processamento> -titgraf <titulo_grafico>
 ```
 
 Argumentos da aplicação:
@@ -44,6 +44,7 @@ Argumentos da aplicação:
 * ```-zkhost <host_zoo_keeper>``` &rarr;  define o _host_ da aplicação _Solr Cloud ZooKeeper_ {addConf}. O padrão é localhost.
 * ```-zkp <porta_zoo_keepper>``` &rarr; define a porta do _host_ da aplicação _Solr Cloud ZooKeeper_ {addConf}. O padrão é 9983.
 * ```-preproc <pre-processamento>``` &rarr; define se deverá utilizar o módulo de pré-processamento implementado neste projeto, valores possíveis: [nao, sim]. Em caso do valor for igual a sim usará o módulo de pré-processamento, caso contrário não. O padrão é sim.
+* ```-titgraf <titulo_grafico>``` &rarr; define o título do gráfico gerado no relatório.
 * ```-h``` ou ```-help``` &rarr; mostra a mensagem de ajuda.
 
 Para facilitar o uso dos argumentos da aplicação, defina os argumentos no arquivo de configuração.
@@ -53,9 +54,10 @@ O arquivo de configuração deve chamar 'config.prop', deve estar no mesmo diret
 
 Em relação a aplicação _gerarGraficos.py_, ela gera os gráficos em dois formatos: png e svg. Para executar a aplicação _gerarGraficos.py_ de forma independente utilize o seguinte comando:
 ```
-python gerarGraficos.py -r <resultado> -m <modo>
+python gerarGraficos.py -r <resultado> -m <modo> -t <titulo_grafico>
 ```
 Argumentos da aplicação:
 * ```-r <resultado>``` &rarr; caminho completo do arquivo de resultados do relatório, extensão _.csv_.
 * ```-m <modo>``` &rarr; define o modo de geração de gráficos, há dois modos disponíveis: [simples, completo]. O modo simples apenas gera o gráfico da tabela média da métrica revocação/precisão. O modo completo também gera os gráficos de todas as consultas, os gráficos utilizando os pontos reais de revocação/precisão e também utilizando os 11 níveis da tabela. O padrão é o modo simples. 
+* ```-t <titulo_grafico>``` &rarr; define o título do gráfico
 * ```-h``` &rarr; mostra a mensagem de ajuda.

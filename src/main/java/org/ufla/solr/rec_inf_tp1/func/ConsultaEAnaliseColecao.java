@@ -156,7 +156,7 @@ public class ConsultaEAnaliseColecao {
 
 		// Gerar gráficos
 		if (arquivoSaida != null) {
-			GerarGraficos gerarGraficos = new GerarGraficos(arquivoSaida);
+			GerarGraficos gerarGraficos = new GerarGraficos(arquivoSaida, configSolrClient.getTituloGrafico());
 			gerarGraficos.gerar();
 		}
 

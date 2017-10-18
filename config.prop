@@ -32,3 +32,4 @@
 -zkhost = localhost
 -zkp = 9983
 -preproc = sim
+-titgraf = ''

@@ -74,6 +74,11 @@ public class ConfigSolrClient {
 	 * neste projeto.
 	 */
 	private boolean preProcessamento = true;
+	
+	/**
+	 * Título do gráfico gerado no relatório.
+	 */
+	private String tituloGrafico;
 
 	/**
 	 * Valor sim do pré-processamento
@@ -259,6 +264,14 @@ public class ConfigSolrClient {
 
 	public void setPreProcessamento(boolean preProcessamento) {
 		this.preProcessamento = preProcessamento;
+	}
+
+	public String getTituloGrafico() {
+		return tituloGrafico;
+	}
+
+	public void setTituloGrafico(String tituloGrafico) {
+		this.tituloGrafico = tituloGrafico;
 	}
 
 }

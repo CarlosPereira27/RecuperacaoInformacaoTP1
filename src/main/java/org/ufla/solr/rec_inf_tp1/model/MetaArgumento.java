@@ -25,6 +25,7 @@ public enum MetaArgumento implements MetaAtributo {
 	ZK_HOST("-zkhost"),
 	ZK_P("-zkp"),
 	PRE_PROC("-preproc"),
+	TIT_GRAF("-titgraf"),
 	CONT_DEF_ATR("CONSTANTE_PARA_FUNCIONAR_EXTRATOR");
 
 	/**
