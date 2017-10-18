@@ -38,6 +38,10 @@ java -jar recInfTP1.jar -cmd deletarColecao -host localhost -p 8983 -c cfc_bm25_
 
 java -jar recInfTP1.jar -cmd deletarColecao -host localhost -p 8983 -c cfc_vet_no_filters
 
+java -jar recInfTP1.jar -cmd deletarColecao -host localhost -p 8983 -c cfc_vet_no_filters_no_pre_proc
+
+java -jar recInfTP1.jar -cmd deletarColecao -host localhost -p 8983 -c cfc_bm25_no_filters_no_pre_proc
+
 
 # Adicionando coleções
 
@@ -52,6 +56,10 @@ java -jar recInfTP1.jar -cmd criarColecao -host localhost -p 8983 -c cfc_vet_pre
 java -jar recInfTP1.jar -cmd criarColecao -host localhost -p 8983 -c cfc_bm25_no_filters -conf bm25_no_filters -nshard 2 -nreplicas 2
 
 java -jar recInfTP1.jar -cmd criarColecao -host localhost -p 8983 -c cfc_vet_no_filters -conf vetorial_no_filters -nshard 2 -nreplicas 2
+
+java -jar recInfTP1.jar -cmd criarColecao -host localhost -p 8983 -c cfc_bm25_no_filters_no_pre_proc -conf bm25_no_filters -nshard 2 -nreplicas 2
+
+java -jar recInfTP1.jar -cmd criarColecao -host localhost -p 8983 -c cfc_vet_no_filters_no_pre_proc -conf vetorial_no_filters -nshard 2 -nreplicas 2
 
 
 # Povoando coleções
@@ -68,6 +76,10 @@ java -jar recInfTP1.jar -cmd povoarColecao -host localhost -p 8983 -c cfc_bm25_n
 
 java -jar recInfTP1.jar -cmd povoarColecao -host localhost -p 8983 -c cfc_vet_no_filters -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -preproc sim
 
+java -jar recInfTP1.jar -cmd povoarColecao -host localhost -p 8983 -c cfc_bm25_no_filters_no_pre_proc -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -preproc nao
+
+java -jar recInfTP1.jar -cmd povoarColecao -host localhost -p 8983 -c cfc_vet_no_filters_no_pre_proc -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -preproc nao
+
 # Realizando consultas e relatórios
 
 java -jar recInfTP1.jar -cmd consultasERelatorio -host localhost -p 8983 -c cfc_bm25 -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -out /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/bm25.csv -preproc nao
@@ -81,4 +93,8 @@ java -jar recInfTP1.jar -cmd consultasERelatorio -host localhost -p 8983 -c cfc_
 java -jar recInfTP1.jar -cmd consultasERelatorio -host localhost -p 8983 -c cfc_bm25_no_filters -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -out /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/preproc_bm25_no_filters.csv -preproc sim
 
 java -jar recInfTP1.jar -cmd consultasERelatorio -host localhost -p 8983 -c cfc_vet_no_filters -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -out /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/preproc_vet_no_filters.csv -preproc sim
+
+java -jar recInfTP1.jar -cmd consultasERelatorio -host localhost -p 8983 -c cfc_bm25_no_filters_no_pre_proc -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -out /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/bm25_no_filters.csv -preproc nao
+
+java -jar recInfTP1.jar -cmd consultasERelatorio -host localhost -p 8983 -c cfc_vet_no_filters_no_pre_proc -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -out /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/vet_no_filters.csv -preproc nao
 

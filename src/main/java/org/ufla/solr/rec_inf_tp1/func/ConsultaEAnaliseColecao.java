@@ -131,6 +131,11 @@ public class ConsultaEAnaliseColecao {
 
 		Relatorio relatorio = new Relatorio(bw);
 
+		if (configSolrClient.getPreProcessamento()) {
+			System.out.println("Pré-processamento da aplicação será aplicado nas consultas!\n");
+		} else {
+			System.out.println("Pré-processamento da aplicação NÃO será aplicado nas consultas!\n");
+		}
 		while ((consulta = extratorConsultas.proximaConsulta()) != null) {
 			if (configSolrClient.getPreProcessamento()) {
 				consulta.setQueryText(PreProcessamento.processText(consulta.getQueryText()));

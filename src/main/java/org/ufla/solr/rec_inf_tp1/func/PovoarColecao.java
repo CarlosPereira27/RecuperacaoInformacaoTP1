@@ -115,6 +115,11 @@ public class PovoarColecao {
 		ExtratorDocumentos extratorDocumentos = new ExtratorDocumentos();
 		Documento documento;
 
+		if (configSolrClient.getPreProcessamento()) {
+			System.out.println("Pré-processamento da aplicação será aplicado no povoamento da coleção!\n");
+		} else {
+			System.out.println("Pré-processamento da aplicação NÃO será aplicado no povoamento da coleção!\n");
+		}
 		while ((documento = extratorDocumentos.proximoDocumento()) != null) {
 			if (configSolrClient.getPreProcessamento()) {
 				documento.setConteudo(PreProcessamento.processText(documento.getConteudo()));

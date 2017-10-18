@@ -95,7 +95,7 @@ public class ConfigSolrClient {
 	 *            pré-processamento ou não
 	 */
 	public void setPreProcessamento(String preProcessamento) {
-		this.preProcessamento = PRE_PROCESSAMENTO_SIM.startsWith(preProcessamento);
+		this.preProcessamento = PRE_PROCESSAMENTO_SIM.toLowerCase().startsWith(preProcessamento.toLowerCase());
 	}
 
 	/**
