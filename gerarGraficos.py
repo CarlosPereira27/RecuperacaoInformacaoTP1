@@ -20,7 +20,7 @@ def proximosPontos(arquivo):
 	revocacao = [];
 	precisao = [];
 	linha = arquivo.readline()[:-1];
-	while linha != ",":
+	while linha and linha != ",":
 		tokens = linha.split(",");
 		if tokens[0] == "Tabela" or tokens[0] == "Total rel":
 			break;
@@ -60,11 +60,39 @@ def plotGrafico(arquivoNome, titulo, sufixoArquivo, pontos):
 	plt.ylim([0,100]);
 	plt.xlabel("Revocação");
 	plt.ylabel('Precisão');
-	plt.savefig(arquivoNome + "png/" + sufixoArquivo + ".png", dpi=300);
-	plt.savefig(arquivoNome + "svg/" + sufixoArquivo + ".svg", dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "png", sufixoArquivo + ".png"), dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "svg", sufixoArquivo + ".svg"), dpi=300);
 	plt.title(titulo);
-	plt.savefig(arquivoNome + "png/titulo/" + sufixoArquivo + "_ctitulo.png", dpi=300);
-	plt.savefig(arquivoNome + "svg/titulo/" + sufixoArquivo + "_ctitulo.svg", dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "png", "titulo", sufixoArquivo + "_ctitulo.png"), dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "svg", "titulo", sufixoArquivo + "_ctitulo.png"), dpi=300);
+	plt.gcf().clear();
+
+"""
+Plota um gráfico de revocação por precisão.
+
+@param arquivoNome 
+			caminho e possível prefixo do nome do arquivo que salvará o gráfico
+@param titulo
+			titulo do gráfico
+@param sufixoArquivo
+			sufixo do nome do arquivo  que salvará o gráfico
+@param pontos
+			pontos utilizados para plotar o gráfico
+"""
+def plotGraficoTabelas(arquivoNome, titulo, sufixoArquivo, tabelaGeral, tabelas):
+	for tabela in tabelas:
+		plt.plot(tabela[0], tabela[1], 'bo-', lw = 1, mew = 1.5);
+	line1, = plt.plot(tabelaGeral[0], tabelaGeral[1], 'ro-', lw = 3, mew = 7, label="Média");
+	plt.xlim([0,100]);
+	plt.ylim([0,100]);
+	plt.xlabel("Revocação");
+	plt.ylabel('Precisão');
+	plt.legend(handles=[line1]);
+	plt.savefig(os.path.join(arquivoNome + "png", sufixoArquivo + ".png"), dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "svg", sufixoArquivo + ".svg"), dpi=300);
+	plt.title(titulo);
+	plt.savefig(os.path.join(arquivoNome + "png", "titulo", sufixoArquivo + "_ctitulo.png"), dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "svg", "titulo", sufixoArquivo + "_ctitulo.png"), dpi=300);
 	plt.gcf().clear();
 
 """
@@ -87,11 +115,11 @@ def plotGrafico2(arquivoNome, titulo, sufixoArquivo, pontos, leg, pontos2, leg2)
 	plt.xlabel("Revocação");
 	plt.ylabel('Precisão');
 	plt.legend(handles=[line1, line2]);
-	plt.savefig(arquivoNome + "png/" + sufixoArquivo + ".png", dpi=300);
-	plt.savefig(arquivoNome + "svg/" + sufixoArquivo + ".svg", dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "png", sufixoArquivo + ".png"), dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "svg", sufixoArquivo + ".svg"), dpi=300);
 	plt.title(titulo);
-	plt.savefig(arquivoNome + "png/titulo/" + sufixoArquivo + "_ctitulo.png", dpi=300);
-	plt.savefig(arquivoNome + "svg/titulo/" + sufixoArquivo + "_ctitulo.svg", dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "png", "titulo", sufixoArquivo + "_ctitulo.png"), dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "svg", "titulo", sufixoArquivo + "_ctitulo.png"), dpi=300);
 	plt.gcf().clear();
 
 """
@@ -115,11 +143,11 @@ def plotGrafico3(arquivoNome, titulo, sufixoArquivo, pontos, leg, pontos2, leg2,
 	plt.xlabel("Revocação");
 	plt.ylabel('Precisão');
 	plt.legend(handles=[line1, line2, line3]);
-	plt.savefig(arquivoNome + "png/" + sufixoArquivo + ".png", dpi=300);
-	plt.savefig(arquivoNome + "svg/" + sufixoArquivo + ".svg", dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "png", sufixoArquivo + ".png"), dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "svg", sufixoArquivo + ".svg"), dpi=300);
 	plt.title(titulo);
-	plt.savefig(arquivoNome + "png/titulo/" + sufixoArquivo + "_ctitulo.png", dpi=300);
-	plt.savefig(arquivoNome + "svg/titulo/" + sufixoArquivo + "_ctitulo.svg", dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "png", "titulo", sufixoArquivo + "_ctitulo.png"), dpi=300);
+	plt.savefig(os.path.join(arquivoNome + "svg", "titulo", sufixoArquivo + "_ctitulo.png"), dpi=300);
 	plt.gcf().clear();
 
 """
@@ -180,23 +208,24 @@ def main(argv):
 			tituloGrafGeral = arg
 		elif opt in ("-o", "--arquivo_saida"):
 			arquivoSaida = arg
-	index = arqResultadosStr.rfind('/');
+	index = arqResultadosStr.rfind(os.sep);
 	diretorioStr = arqResultadosStr[:index+1];
 	arqNome = arqResultadosStr[index+1:-4]
+
 	criarDiretorio(diretorioStr);
-	criarDiretorio(diretorioStr + "png/");
-	criarDiretorio(diretorioStr + "svg/");
-	criarDiretorio(diretorioStr + "png/titulo/");
-	criarDiretorio(diretorioStr + "svg/titulo/");
+	criarDiretorio(diretorioStr + "png" + os.sep);
+	criarDiretorio(diretorioStr + "svg" + os.sep);
+	criarDiretorio(os.path.join(diretorioStr + "png", "titulo") + os.sep);
+	criarDiretorio(os.path.join(diretorioStr + "svg", "titulo") + os.sep);
 	if arquivoSaida != '':
-		index = arquivoSaida.rfind('/');
+		index = arquivoSaida.rfind(os.sep);
 		diretorioStr = arquivoSaida[:index+1];
 		arqNome = arquivoSaida[index+1:]
 		criarDiretorio(diretorioStr);
-		criarDiretorio(diretorioStr + "png/");
-		criarDiretorio(diretorioStr + "svg/");
-		criarDiretorio(diretorioStr + "png/titulo/");
-		criarDiretorio(diretorioStr + "svg/titulo/");
+		criarDiretorio(diretorioStr + "png" + os.sep);
+		criarDiretorio(diretorioStr + "svg" + os.sep);
+		criarDiretorio(os.path.join(diretorioStr + "png", "titulo") + os.sep);
+		criarDiretorio(os.path.join(diretorioStr + "svg", "titulo") + os.sep);
 
 	arquivo = open(arqResultadosStr, 'r');
 	pularLinhas(arquivo, 3);
@@ -225,19 +254,18 @@ def main(argv):
 		if arqResultadosStr3 != '':
 			arquivo3.close();
 		sys.exit(0);
-	"""
-	Comentar as duas linhas acimas para gerar todos os gráficos.
-	"""
 
-	diretorioStr = arqResultadosStr[:-4] + "_cons/";
+	diretorioStr = arqResultadosStr[:-4] + "_cons" + os.sep;
 	criarDiretorio(diretorioStr);
-	criarDiretorio(diretorioStr + "png/");
-	criarDiretorio(diretorioStr + "svg/");
-	criarDiretorio(diretorioStr + "png/titulo/");
-	criarDiretorio(diretorioStr + "svg/titulo/");
+	criarDiretorio(diretorioStr + "png" + os.sep);
+	criarDiretorio(diretorioStr + "svg" + os.sep);
+	criarDiretorio(os.path.join(diretorioStr + "png", "titulo") + os.sep);
+	criarDiretorio(os.path.join(diretorioStr + "svg", "titulo") + os.sep);
 
 	MAX_CONSULTAS = 100;
 	pularLinhas(arquivo, 3);
+	tabelaGeral = pontos;
+	tabelas = []
 	for idConsulta in range(1, MAX_CONSULTAS + 1):
 		pularLinhas(arquivo, 9);
 		pontos = proximosPontos(arquivo);
@@ -250,10 +278,14 @@ def main(argv):
 		pontos = proximosPontos(arquivo);
 		titulo = tituloGraf + "- Cons " + idConsultaStr + " - 11 níveis";
 		grafico = arqNome + "_cons"+ idConsultaStr + "_tabela";
-		plotGrafico(diretorioStr, titulo, grafico, pontos)
+		plotGrafico(diretorioStr, titulo, grafico, pontos);
+		tabelas.append(pontos);
 
-
-	print("Os gráficos foram gerados com sucesso!")
+	index = arqResultadosStr.rfind(os.sep);
+	diretorioStr = arqResultadosStr[:index+1];
+	arqNome = arqResultadosStr[index+1:-4];
+	plotGraficoTabelas(diretorioStr, tituloGraf + " - tabelas", arqNome + "_tabelas", tabelaGeral, tabelas);
+	print("Os gráficos foram gerados com sucesso!");
 	arquivo.close();
 
 
