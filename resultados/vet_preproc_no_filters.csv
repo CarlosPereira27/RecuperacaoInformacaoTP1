@@ -1,4 +1,5 @@
-Tabela Média,3087.34
+Tabela Média,
+Área,3087.34
 Revocação,Precisão
 0.00,83.39
 10.00,67.96
@@ -11,12 +12,18 @@ Revocação,Precisão
 80.00,7.97
 90.00,3.52
 100.00,0.79
-
-
-
+Total rel,4819
+Total rec,83913
+Total rec rel,4130
+,
+,
+,
 Consulta Num,1
-
-Pontos
+Qtd Rel,34
+Qtd Rec,926
+Qtd Rec Rel,31
+Pontos,
+Área,2730.75
 Revocação,Precisão
 2.94,100.00
 5.88,22.22
@@ -49,7 +56,8 @@ Revocação,Precisão
 85.29,6.12
 88.24,3.51
 91.18,3.45
-Tabela,2799.43
+Tabela,
+Área,2799.43
 Revocação,Precisão
 0.00,100.00
 10.00,36.36
@@ -62,12 +70,15 @@ Revocação,Precisão
 80.00,9.66
 90.00,3.45
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,2
-
-Pontos
+Qtd Rel,7
+Qtd Rec,724
+Qtd Rec Rel,6
+Pontos,
+Área,1383.89
 Revocação,Precisão
 14.29,50.00
 28.57,11.11
@@ -75,7 +86,8 @@ Revocação,Precisão
 57.14,1.34
 71.43,1.07
 85.71,1.03
-Tabela,1052.60
+Tabela,
+Área,1052.60
 Revocação,Precisão
 0.00,50.00
 10.00,50.00
@@ -88,12 +100,15 @@ Revocação,Precisão
 80.00,1.03
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,3
-
-Pontos
+Qtd Rel,43
+Qtd Rec,976
+Qtd Rec Rel,41
+Pontos,
+Área,1830.73
 Revocação,Precisão
 2.33,100.00
 4.65,66.67
@@ -136,7 +151,8 @@ Revocação,Precisão
 90.70,4.50
 93.02,4.31
 95.35,4.31
-Tabela,1630.39
+Tabela,
+Área,1630.39
 Revocação,Precisão
 0.00,100.00
 10.00,21.74
@@ -149,12 +165,15 @@ Revocação,Precisão
 80.00,4.95
 90.00,4.50
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,4
-
-Pontos
+Qtd Rel,9
+Qtd Rec,367
+Qtd Rec Rel,8
+Pontos,
+Área,3128.93
 Revocação,Precisão
 11.11,100.00
 22.22,50.00
@@ -164,7 +183,8 @@ Revocação,Precisão
 66.67,6.90
 77.78,6.09
 88.89,2.33
-Tabela,2816.04
+Tabela,
+Área,2816.04
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -177,12 +197,15 @@ Revocação,Precisão
 80.00,2.33
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,5
-
-Pontos
+Qtd Rel,131
+Qtd Rec,261
+Qtd Rec Rel,63
+Pontos,
+Área,3402.48
 Revocação,Precisão
 0.76,100.00
 1.53,100.00
@@ -247,7 +270,8 @@ Revocação,Precisão
 46.56,27.73
 47.33,25.41
 48.09,25.30
-Tabela,2679.29
+Tabela,
+Área,2679.29
 Revocação,Precisão
 0.00,100.00
 10.00,77.78
@@ -260,12 +284,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,6
-
-Pontos
+Qtd Rel,24
+Qtd Rec,958
+Qtd Rec Rel,23
+Pontos,
+Área,3116.19
 Revocação,Precisão
 4.17,100.00
 8.33,100.00
@@ -290,7 +317,8 @@ Revocação,Precisão
 87.50,5.83
 91.67,2.53
 95.83,2.55
-Tabela,2792.58
+Tabela,
+Área,2792.58
 Revocação,Precisão
 0.00,100.00
 10.00,60.00
@@ -303,12 +331,15 @@ Revocação,Precisão
 80.00,7.04
 90.00,2.53
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,7
-
-Pontos
+Qtd Rel,28
+Qtd Rec,1030
+Qtd Rec Rel,24
+Pontos,
+Área,2084.78
 Revocação,Precisão
 3.57,100.00
 7.14,66.67
@@ -334,7 +365,8 @@ Revocação,Precisão
 78.57,3.00
 82.14,2.88
 85.71,2.42
-Tabela,2021.56
+Tabela,
+Área,2021.56
 Revocação,Precisão
 0.00,100.00
 10.00,75.00
@@ -347,12 +379,15 @@ Revocação,Precisão
 80.00,2.88
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,8
-
-Pontos
+Qtd Rel,22
+Qtd Rec,673
+Qtd Rec Rel,16
+Pontos,
+Área,338.26
 Revocação,Precisão
 4.55,25.00
 9.09,1.71
@@ -370,7 +405,8 @@ Revocação,Precisão
 63.64,2.30
 68.18,2.38
 72.73,2.44
-Tabela,270.46
+Tabela,
+Área,270.46
 Revocação,Precisão
 0.00,25.00
 10.00,1.58
@@ -383,12 +419,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,9
-
-Pontos
+Qtd Rel,10
+Qtd Rec,846
+Qtd Rec Rel,9
+Pontos,
+Área,1823.59
 Revocação,Precisão
 10.00,16.67
 20.00,25.00
@@ -399,7 +438,8 @@ Revocação,Precisão
 70.00,14.58
 80.00,7.77
 90.00,1.84
-Tabela,1823.59
+Tabela,
+Área,1823.59
 Revocação,Precisão
 0.00,16.67
 10.00,16.67
@@ -412,12 +452,15 @@ Revocação,Precisão
 80.00,7.77
 90.00,1.84
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,10
-
-Pontos
+Qtd Rel,25
+Qtd Rec,957
+Qtd Rec Rel,24
+Pontos,
+Área,2773.01
 Revocação,Precisão
 4.00,50.00
 8.00,66.67
@@ -443,7 +486,8 @@ Revocação,Precisão
 88.00,3.08
 92.00,3.15
 96.00,3.03
-Tabela,2702.55
+Tabela,
+Área,2702.55
 Revocação,Precisão
 0.00,50.00
 10.00,75.00
@@ -456,12 +500,15 @@ Revocação,Precisão
 80.00,6.19
 90.00,3.15
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,11
-
-Pontos
+Qtd Rel,22
+Qtd Rec,412
+Qtd Rec Rel,19
+Pontos,
+Área,5732.51
 Revocação,Precisão
 4.55,100.00
 9.09,100.00
@@ -482,7 +529,8 @@ Revocação,Precisão
 77.27,30.91
 81.82,18.37
 86.36,16.10
-Tabela,5151.83
+Tabela,
+Área,5151.83
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -495,12 +543,15 @@ Revocação,Precisão
 80.00,18.37
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,12
-
-Pontos
+Qtd Rel,7
+Qtd Rec,966
+Qtd Rec Rel,6
+Pontos,
+Área,956.44
 Revocação,Precisão
 14.29,20.00
 28.57,13.33
@@ -508,7 +559,8 @@ Revocação,Precisão
 57.14,4.44
 71.43,5.26
 85.71,2.37
-Tabela,837.53
+Tabela,
+Área,837.53
 Revocação,Precisão
 0.00,20.00
 10.00,20.00
@@ -521,12 +573,15 @@ Revocação,Precisão
 80.00,2.37
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,13
-
-Pontos
+Qtd Rel,24
+Qtd Rec,954
+Qtd Rec Rel,22
+Pontos,
+Área,1735.32
 Revocação,Precisão
 4.17,14.29
 8.33,22.22
@@ -550,7 +605,8 @@ Revocação,Precisão
 83.33,6.97
 87.50,4.83
 91.67,4.14
-Tabela,1728.29
+Tabela,
+Área,1728.29
 Revocação,Precisão
 0.00,14.29
 10.00,30.00
@@ -563,12 +619,15 @@ Revocação,Precisão
 80.00,6.97
 90.00,4.14
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,14
-
-Pontos
+Qtd Rel,55
+Qtd Rec,1068
+Qtd Rec Rel,53
+Pontos,
+Área,2544.93
 Revocação,Precisão
 1.82,100.00
 3.64,50.00
@@ -623,7 +682,8 @@ Revocação,Precisão
 92.73,5.21
 94.55,5.05
 96.36,5.00
-Tabela,2518.26
+Tabela,
+Área,2518.26
 Revocação,Precisão
 0.00,100.00
 10.00,60.00
@@ -636,12 +696,15 @@ Revocação,Precisão
 80.00,7.92
 90.00,5.17
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,15
-
-Pontos
+Qtd Rel,104
+Qtd Rec,399
+Qtd Rec Rel,51
+Pontos,
+Área,2497.75
 Revocação,Precisão
 0.96,100.00
 1.92,100.00
@@ -694,7 +757,8 @@ Revocação,Precisão
 47.12,13.61
 48.08,13.74
 49.04,13.18
-Tabela,2079.80
+Tabela,
+Área,2079.80
 Revocação,Precisão
 0.00,100.00
 10.00,68.75
@@ -707,12 +771,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,16
-
-Pontos
+Qtd Rel,180
+Qtd Rec,726
+Qtd Rec Rel,142
+Pontos,
+Área,3076.25
 Revocação,Precisão
 0.56,100.00
 1.11,100.00
@@ -856,7 +923,8 @@ Revocação,Precisão
 77.78,20.00
 78.33,20.00
 78.89,19.64
-Tabela,2858.77
+Tabela,
+Área,2858.77
 Revocação,Precisão
 0.00,100.00
 10.00,52.78
@@ -869,12 +937,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,17
-
-Pontos
+Qtd Rel,55
+Qtd Rec,973
+Qtd Rec Rel,52
+Pontos,
+Área,2305.06
 Revocação,Precisão
 1.82,100.00
 3.64,100.00
@@ -928,7 +999,8 @@ Revocação,Precisão
 90.91,6.46
 92.73,6.48
 94.55,5.90
-Tabela,2120.97
+Tabela,
+Área,2120.97
 Revocação,Precisão
 0.00,100.00
 10.00,50.00
@@ -941,12 +1013,15 @@ Revocação,Precisão
 80.00,8.44
 90.00,6.46
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,18
-
-Pontos
+Qtd Rel,21
+Qtd Rec,856
+Qtd Rec Rel,21
+Pontos,
+Área,6354.71
 Revocação,Precisão
 4.76,100.00
 9.52,100.00
@@ -969,7 +1044,8 @@ Revocação,Precisão
 90.48,6.31
 95.24,4.76
 100.00,2.77
-Tabela,6382.24
+Tabela,
+Área,6382.24
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -982,12 +1058,15 @@ Revocação,Precisão
 80.00,11.49
 90.00,6.31
 100.00,2.77
-
-
-
+,
+,
+,
 Consulta Num,19
-
-Pontos
+Qtd Rel,22
+Qtd Rec,986
+Qtd Rec Rel,22
+Pontos,
+Área,1284.78
 Revocação,Precisão
 4.55,50.00
 9.09,18.18
@@ -1011,7 +1090,8 @@ Revocação,Precisão
 90.91,3.06
 95.45,2.98
 100.00,3.06
-Tabela,1332.83
+Tabela,
+Área,1332.83
 Revocação,Precisão
 0.00,50.00
 10.00,25.00
@@ -1024,12 +1104,15 @@ Revocação,Precisão
 80.00,4.60
 90.00,3.06
 100.00,3.06
-
-
-
+,
+,
+,
 Consulta Num,20
-
-Pontos
+Qtd Rel,46
+Qtd Rec,968
+Qtd Rec Rel,43
+Pontos,
+Área,6537.32
 Revocação,Precisão
 2.17,100.00
 4.35,100.00
@@ -1074,7 +1157,8 @@ Revocação,Precisão
 89.13,5.18
 91.30,4.82
 93.48,4.90
-Tabela,6314.47
+Tabela,
+Área,6314.47
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -1087,12 +1171,15 @@ Revocação,Precisão
 80.00,11.49
 90.00,4.82
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,21
-
-Pontos
+Qtd Rel,25
+Qtd Rec,949
+Qtd Rec Rel,21
+Pontos,
+Área,3117.53
 Revocação,Precisão
 4.00,100.00
 8.00,100.00
@@ -1115,7 +1202,8 @@ Revocação,Precisão
 76.00,3.54
 80.00,3.50
 84.00,2.28
-Tabela,3111.62
+Tabela,
+Área,3111.62
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -1128,12 +1216,15 @@ Revocação,Precisão
 80.00,3.50
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,22
-
-Pontos
+Qtd Rel,70
+Qtd Rec,201
+Qtd Rec Rel,37
+Pontos,
+Área,3234.32
 Revocação,Precisão
 1.43,100.00
 2.86,100.00
@@ -1172,7 +1263,8 @@ Revocação,Precisão
 50.00,20.00
 51.43,19.05
 52.86,18.50
-Tabela,2783.65
+Tabela,
+Área,2783.65
 Revocação,Precisão
 0.00,100.00
 10.00,87.50
@@ -1185,12 +1277,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,23
-
-Pontos
+Qtd Rel,35
+Qtd Rec,844
+Qtd Rec Rel,26
+Pontos,
+Área,659.30
 Revocação,Precisão
 2.86,16.67
 5.71,18.18
@@ -1218,7 +1313,8 @@ Revocação,Precisão
 68.57,3.39
 71.43,3.45
 74.29,3.51
-Tabela,577.99
+Tabela,
+Área,577.99
 Revocação,Precisão
 0.00,16.67
 10.00,15.38
@@ -1231,12 +1327,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,24
-
-Pontos
+Qtd Rel,31
+Qtd Rec,860
+Qtd Rec Rel,25
+Pontos,
+Área,669.58
 Revocação,Precisão
 3.23,14.29
 6.45,12.50
@@ -1263,7 +1362,8 @@ Revocação,Precisão
 74.19,3.50
 77.42,3.25
 80.65,3.13
-Tabela,623.38
+Tabela,
+Área,623.38
 Revocação,Precisão
 0.00,14.29
 10.00,9.52
@@ -1276,12 +1376,15 @@ Revocação,Precisão
 80.00,3.13
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,25
-
-Pontos
+Qtd Rel,51
+Qtd Rec,398
+Qtd Rec Rel,42
+Pontos,
+Área,2749.21
 Revocação,Precisão
 1.96,100.00
 3.92,33.33
@@ -1325,7 +1428,8 @@ Revocação,Precisão
 78.43,10.42
 80.39,10.51
 82.35,10.69
-Tabela,2720.22
+Tabela,
+Área,2720.22
 Revocação,Precisão
 0.00,100.00
 10.00,50.00
@@ -1338,12 +1442,15 @@ Revocação,Precisão
 80.00,10.51
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,26
-
-Pontos
+Qtd Rel,33
+Qtd Rec,415
+Qtd Rec Rel,23
+Pontos,
+Área,3590.94
 Revocação,Precisão
 3.03,100.00
 6.06,100.00
@@ -1368,7 +1475,8 @@ Revocação,Precisão
 63.64,8.54
 66.67,7.01
 69.70,5.96
-Tabela,3184.12
+Tabela,
+Área,3184.12
 Revocação,Precisão
 0.00,100.00
 10.00,80.00
@@ -1381,12 +1489,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,27
-
-Pontos
+Qtd Rel,11
+Qtd Rec,576
+Qtd Rec Rel,9
+Pontos,
+Área,2628.49
 Revocação,Precisão
 9.09,100.00
 18.18,100.00
@@ -1397,7 +1508,8 @@ Revocação,Precisão
 63.64,3.11
 72.73,1.46
 81.82,1.60
-Tabela,1883.33
+Tabela,
+Área,1883.33
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -1410,12 +1522,15 @@ Revocação,Precisão
 80.00,1.60
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,28
-
-Pontos
+Qtd Rel,51
+Qtd Rec,664
+Qtd Rec Rel,36
+Pontos,
+Área,1581.39
 Revocação,Precisão
 1.96,100.00
 3.92,100.00
@@ -1453,7 +1568,8 @@ Revocação,Precisão
 66.67,6.61
 68.63,5.75
 70.59,5.47
-Tabela,1479.64
+Tabela,
+Área,1479.64
 Revocação,Precisão
 0.00,100.00
 10.00,50.00
@@ -1466,12 +1582,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,29
-
-Pontos
+Qtd Rel,44
+Qtd Rec,785
+Qtd Rec Rel,41
+Pontos,
+Área,1302.71
 Revocação,Precisão
 2.27,50.00
 4.55,66.67
@@ -1514,7 +1633,8 @@ Revocação,Precisão
 88.64,5.33
 90.91,5.45
 93.18,5.40
-Tabela,1106.52
+Tabela,
+Área,1106.52
 Revocação,Precisão
 0.00,50.00
 10.00,29.41
@@ -1527,12 +1647,15 @@ Revocação,Precisão
 80.00,5.18
 90.00,5.45
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,30
-
-Pontos
+Qtd Rel,17
+Qtd Rec,681
+Qtd Rec Rel,15
+Pontos,
+Área,6022.78
 Revocação,Precisão
 5.88,100.00
 11.76,100.00
@@ -1549,7 +1672,8 @@ Revocação,Precisão
 76.47,17.57
 82.35,10.53
 88.24,3.13
-Tabela,5871.35
+Tabela,
+Área,5871.35
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -1562,12 +1686,15 @@ Revocação,Precisão
 80.00,10.53
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,31
-
-Pontos
+Qtd Rel,58
+Qtd Rec,934
+Qtd Rec Rel,53
+Pontos,
+Área,5343.99
 Revocação,Precisão
 1.72,100.00
 3.45,100.00
@@ -1622,7 +1749,8 @@ Revocação,Precisão
 87.93,7.73
 89.66,7.38
 91.38,6.22
-Tabela,5278.99
+Tabela,
+Área,5278.99
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -1635,12 +1763,15 @@ Revocação,Precisão
 80.00,9.96
 90.00,6.22
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,32
-
-Pontos
+Qtd Rel,30
+Qtd Rec,926
+Qtd Rec Rel,28
+Pontos,
+Área,1864.39
 Revocação,Precisão
 3.33,100.00
 6.67,100.00
@@ -1670,7 +1801,8 @@ Revocação,Precisão
 86.67,4.59
 90.00,3.86
 93.33,3.97
-Tabela,1777.61
+Tabela,
+Área,1777.61
 Revocação,Precisão
 0.00,100.00
 10.00,50.00
@@ -1683,12 +1815,15 @@ Revocação,Precisão
 80.00,4.77
 90.00,3.97
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,33
-
-Pontos
+Qtd Rel,57
+Qtd Rec,655
+Qtd Rec Rel,49
+Pontos,
+Área,5616.43
 Revocação,Precisão
 1.75,100.00
 3.51,100.00
@@ -1739,7 +1874,8 @@ Revocação,Precisão
 82.46,13.62
 84.21,10.39
 85.96,7.98
-Tabela,5482.73
+Tabela,
+Área,5482.73
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -1752,12 +1888,15 @@ Revocação,Precisão
 80.00,14.42
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,34
-
-Pontos
+Qtd Rel,39
+Qtd Rec,620
+Qtd Rec Rel,34
+Pontos,
+Área,4358.05
 Revocação,Precisão
 2.56,100.00
 5.13,100.00
@@ -1793,7 +1932,8 @@ Revocação,Precisão
 82.05,8.04
 84.62,7.84
 87.18,7.01
-Tabela,4072.28
+Tabela,
+Área,4072.28
 Revocação,Precisão
 0.00,100.00
 10.00,80.00
@@ -1806,12 +1946,15 @@ Revocação,Precisão
 80.00,8.04
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,35
-
-Pontos
+Qtd Rel,14
+Qtd Rec,1051
+Qtd Rec Rel,12
+Pontos,
+Área,2944.35
 Revocação,Precisão
 7.14,100.00
 14.29,40.00
@@ -1825,7 +1968,8 @@ Revocação,Precisão
 71.43,5.78
 78.57,1.87
 85.71,1.20
-Tabela,2471.54
+Tabela,
+Área,2471.54
 Revocação,Precisão
 0.00,100.00
 10.00,40.00
@@ -1838,12 +1982,15 @@ Revocação,Precisão
 80.00,1.20
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,36
-
-Pontos
+Qtd Rel,9
+Qtd Rec,914
+Qtd Rec Rel,9
+Pontos,
+Área,3197.52
 Revocação,Precisão
 11.11,100.00
 22.22,50.00
@@ -1854,7 +2001,8 @@ Revocação,Precisão
 77.78,5.11
 88.89,4.21
 100.00,2.67
-Tabela,3024.65
+Tabela,
+Área,3024.65
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -1867,12 +2015,15 @@ Revocação,Precisão
 80.00,4.21
 90.00,2.67
 100.00,2.67
-
-
-
+,
+,
+,
 Consulta Num,37
-
-Pontos
+Qtd Rel,98
+Qtd Rec,883
+Qtd Rec Rel,93
+Pontos,
+Área,7099.05
 Revocação,Precisão
 1.02,100.00
 2.04,100.00
@@ -1967,7 +2118,8 @@ Revocação,Precisão
 92.86,12.43
 93.88,12.40
 94.90,12.05
-Tabela,7040.17
+Tabela,
+Área,7040.17
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -1980,12 +2132,15 @@ Revocação,Precisão
 80.00,32.51
 90.00,12.77
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,38
-
-Pontos
+Qtd Rel,53
+Qtd Rec,75
+Qtd Rec Rel,23
+Pontos,
+Área,3750.81
 Revocação,Precisão
 1.89,100.00
 3.77,100.00
@@ -2010,7 +2165,8 @@ Revocação,Precisão
 39.62,32.81
 41.51,30.99
 43.40,31.08
-Tabela,2748.16
+Tabela,
+Área,2748.16
 Revocação,Precisão
 0.00,100.00
 10.00,85.71
@@ -2023,12 +2179,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,39
-
-Pontos
+Qtd Rel,162
+Qtd Rec,207
+Qtd Rec Rel,113
+Pontos,
+Área,5097.70
 Revocação,Precisão
 0.62,100.00
 1.23,100.00
@@ -2143,7 +2302,8 @@ Revocação,Precisão
 68.52,54.41
 69.14,54.63
 69.75,54.85
-Tabela,4003.99
+Tabela,
+Área,4003.99
 Revocação,Precisão
 0.00,100.00
 10.00,70.83
@@ -2156,12 +2316,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,40
-
-Pontos
+Qtd Rel,146
+Qtd Rec,782
+Qtd Rec Rel,117
+Pontos,
+Área,1934.98
 Revocação,Precisão
 0.68,25.00
 1.37,22.22
@@ -2280,7 +2443,8 @@ Revocação,Precisão
 78.77,15.29
 79.45,15.22
 80.14,15.08
-Tabela,1801.88
+Tabela,
+Área,1801.88
 Revocação,Precisão
 0.00,25.00
 10.00,26.32
@@ -2293,12 +2457,15 @@ Revocação,Precisão
 80.00,15.08
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,41
-
-Pontos
+Qtd Rel,15
+Qtd Rec,983
+Qtd Rec Rel,15
+Pontos,
+Área,3029.07
 Revocação,Precisão
 6.67,100.00
 13.33,50.00
@@ -2315,7 +2482,8 @@ Revocação,Precisão
 86.67,1.55
 93.33,1.66
 100.00,1.62
-Tabela,2763.88
+Tabela,
+Área,2763.88
 Revocação,Precisão
 0.00,100.00
 10.00,50.00
@@ -2328,12 +2496,15 @@ Revocação,Precisão
 80.00,1.59
 90.00,1.66
 100.00,1.62
-
-
-
+,
+,
+,
 Consulta Num,42
-
-Pontos
+Qtd Rel,47
+Qtd Rec,959
+Qtd Rec Rel,40
+Pontos,
+Área,3095.73
 Revocação,Precisão
 2.13,100.00
 4.26,100.00
@@ -2375,7 +2546,8 @@ Revocação,Precisão
 80.85,4.41
 82.98,4.39
 85.11,4.45
-Tabela,2979.41
+Tabela,
+Área,2979.41
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -2388,12 +2560,15 @@ Revocação,Precisão
 80.00,4.41
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,43
-
-Pontos
+Qtd Rel,98
+Qtd Rec,622
+Qtd Rec Rel,85
+Pontos,
+Área,3766.68
 Revocação,Precisão
 1.02,100.00
 2.04,66.67
@@ -2480,7 +2655,8 @@ Revocação,Precisão
 84.69,16.31
 85.71,16.06
 86.73,14.03
-Tabela,3745.82
+Tabela,
+Área,3745.82
 Revocação,Precisão
 0.00,100.00
 10.00,58.82
@@ -2493,12 +2669,15 @@ Revocação,Precisão
 80.00,18.46
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,44
-
-Pontos
+Qtd Rel,140
+Qtd Rec,975
+Qtd Rec Rel,135
+Pontos,
+Área,4356.85
 Revocação,Precisão
 0.71,50.00
 1.43,66.67
@@ -2635,7 +2814,8 @@ Revocação,Precisão
 95.00,14.18
 95.71,13.91
 96.43,13.92
-Tabela,4194.92
+Tabela,
+Área,4194.92
 Revocação,Precisão
 0.00,50.00
 10.00,78.95
@@ -2648,12 +2828,15 @@ Revocação,Precisão
 80.00,21.12
 90.00,15.21
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,45
-
-Pontos
+Qtd Rel,20
+Qtd Rec,911
+Qtd Rec Rel,20
+Pontos,
+Área,4443.07
 Revocação,Precisão
 5.00,100.00
 10.00,100.00
@@ -2675,7 +2858,8 @@ Revocação,Precisão
 90.00,4.79
 95.00,4.09
 100.00,2.95
-Tabela,4601.65
+Tabela,
+Área,4601.65
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -2688,12 +2872,15 @@ Revocação,Precisão
 80.00,8.04
 90.00,4.79
 100.00,2.95
-
-
-
+,
+,
+,
 Consulta Num,46
-
-Pontos
+Qtd Rel,18
+Qtd Rec,924
+Qtd Rec Rel,14
+Pontos,
+Área,2783.59
 Revocação,Precisão
 5.56,100.00
 11.11,66.67
@@ -2709,7 +2896,8 @@ Revocação,Precisão
 66.67,5.77
 72.22,4.19
 77.78,1.65
-Tabela,2441.79
+Tabela,
+Área,2441.79
 Revocação,Precisão
 0.00,100.00
 10.00,66.67
@@ -2722,12 +2910,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,47
-
-Pontos
+Qtd Rel,60
+Qtd Rec,1041
+Qtd Rec Rel,57
+Pontos,
+Área,1457.56
 Revocação,Precisão
 1.67,100.00
 3.33,40.00
@@ -2786,7 +2977,8 @@ Revocação,Precisão
 91.67,5.53
 93.33,5.61
 95.00,5.68
-Tabela,1584.03
+Tabela,
+Área,1584.03
 Revocação,Precisão
 0.00,100.00
 10.00,23.08
@@ -2799,12 +2991,15 @@ Revocação,Precisão
 80.00,6.19
 90.00,5.67
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,48
-
-Pontos
+Qtd Rel,30
+Qtd Rec,968
+Qtd Rec Rel,30
+Pontos,
+Área,1745.12
 Revocação,Precisão
 3.33,20.00
 6.67,33.33
@@ -2836,7 +3031,8 @@ Revocação,Precisão
 93.33,7.29
 96.67,5.79
 100.00,5.74
-Tabela,1978.79
+Tabela,
+Área,1978.79
 Revocação,Precisão
 0.00,20.00
 10.00,37.50
@@ -2849,12 +3045,15 @@ Revocação,Precisão
 80.00,8.03
 90.00,7.29
 100.00,5.74
-
-
-
+,
+,
+,
 Consulta Num,49
-
-Pontos
+Qtd Rel,36
+Qtd Rec,977
+Qtd Rec Rel,33
+Pontos,
+Área,4452.32
 Revocação,Precisão
 2.78,100.00
 5.56,100.00
@@ -2889,7 +3088,8 @@ Revocação,Precisão
 86.11,3.37
 88.89,3.42
 91.67,3.46
-Tabela,4259.88
+Tabela,
+Área,4259.88
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -2902,12 +3102,15 @@ Revocação,Precisão
 80.00,3.47
 90.00,3.46
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,50
-
-Pontos
+Qtd Rel,25
+Qtd Rec,897
+Qtd Rec Rel,23
+Pontos,
+Área,3363.05
 Revocação,Precisão
 4.00,100.00
 8.00,100.00
@@ -2932,7 +3135,8 @@ Revocação,Precisão
 84.00,4.83
 88.00,3.24
 92.00,3.24
-Tabela,3266.97
+Tabela,
+Área,3266.97
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -2945,12 +3149,15 @@ Revocação,Precisão
 80.00,4.71
 90.00,3.24
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,51
-
-Pontos
+Qtd Rel,241
+Qtd Rec,1239
+Qtd Rec Rel,241
+Pontos,
+Área,3295.14
 Revocação,Precisão
 0.41,100.00
 0.83,100.00
@@ -3193,7 +3400,8 @@ Revocação,Precisão
 99.17,19.83
 99.59,19.80
 100.00,19.56
-Tabela,4300.68
+Tabela,
+Área,4300.68
 Revocação,Precisão
 0.00,100.00
 10.00,65.79
@@ -3206,16 +3414,20 @@ Revocação,Precisão
 80.00,24.03
 90.00,21.36
 100.00,19.56
-
-
-
+,
+,
+,
 Consulta Num,52
-
-Pontos
+Qtd Rel,2
+Qtd Rec,840
+Qtd Rec Rel,2
+Pontos,
+Área,7493.02
 Revocação,Precisão
 50.00,100.00
 100.00,0.28
-Tabela,5512.57
+Tabela,
+Área,5512.57
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -3228,12 +3440,15 @@ Revocação,Precisão
 80.00,0.28
 90.00,0.28
 100.00,0.28
-
-
-
+,
+,
+,
 Consulta Num,53
-
-Pontos
+Qtd Rel,23
+Qtd Rec,859
+Qtd Rec Rel,23
+Pontos,
+Área,3929.34
 Revocação,Precisão
 4.35,100.00
 8.70,100.00
@@ -3258,7 +3473,8 @@ Revocação,Precisão
 91.30,14.29
 95.65,10.28
 100.00,2.96
-Tabela,3880.42
+Tabela,
+Área,3880.42
 Revocação,Precisão
 0.00,100.00
 10.00,75.00
@@ -3271,12 +3487,15 @@ Revocação,Precisão
 80.00,14.73
 90.00,14.29
 100.00,2.96
-
-
-
+,
+,
+,
 Consulta Num,54
-
-Pontos
+Qtd Rel,62
+Qtd Rec,1043
+Qtd Rec Rel,61
+Pontos,
+Área,4933.63
 Revocação,Precisão
 1.61,100.00
 3.23,100.00
@@ -3339,7 +3558,8 @@ Revocação,Precisão
 95.16,6.55
 96.77,6.09
 98.39,6.03
-Tabela,4898.96
+Tabela,
+Área,4898.96
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -3352,12 +3572,15 @@ Revocação,Precisão
 80.00,14.16
 90.00,7.85
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,55
-
-Pontos
+Qtd Rel,24
+Qtd Rec,888
+Qtd Rec Rel,20
+Pontos,
+Área,592.03
 Revocação,Precisão
 4.17,16.67
 8.33,20.00
@@ -3379,7 +3602,8 @@ Revocação,Precisão
 75.00,2.38
 79.17,2.31
 83.33,2.37
-Tabela,488.83
+Tabela,
+Área,488.83
 Revocação,Precisão
 0.00,16.67
 10.00,13.64
@@ -3392,12 +3616,15 @@ Revocação,Precisão
 80.00,2.37
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,56
-
-Pontos
+Qtd Rel,32
+Qtd Rec,912
+Qtd Rec Rel,32
+Pontos,
+Área,855.97
 Revocação,Precisão
 3.13,50.00
 6.25,25.00
@@ -3431,7 +3658,8 @@ Revocação,Precisão
 93.75,4.21
 96.88,3.99
 100.00,4.02
-Tabela,1040.83
+Tabela,
+Área,1040.83
 Revocação,Precisão
 0.00,50.00
 10.00,26.67
@@ -3444,12 +3672,15 @@ Revocação,Precisão
 80.00,4.14
 90.00,4.15
 100.00,4.02
-
-
-
+,
+,
+,
 Consulta Num,57
-
-Pontos
+Qtd Rel,51
+Qtd Rec,856
+Qtd Rec Rel,51
+Pontos,
+Área,5157.05
 Revocação,Precisão
 1.96,100.00
 3.92,100.00
@@ -3502,7 +3733,8 @@ Revocação,Precisão
 96.08,12.34
 98.04,12.17
 100.00,8.43
-Tabela,5427.52
+Tabela,
+Área,5427.52
 Revocação,Precisão
 0.00,100.00
 10.00,75.00
@@ -3515,12 +3747,15 @@ Revocação,Precisão
 80.00,32.54
 90.00,25.27
 100.00,8.43
-
-
-
+,
+,
+,
 Consulta Num,58
-
-Pontos
+Qtd Rel,95
+Qtd Rec,919
+Qtd Rec Rel,93
+Pontos,
+Área,4295.98
 Revocação,Precisão
 1.05,100.00
 2.11,100.00
@@ -3615,7 +3850,8 @@ Revocação,Precisão
 95.79,16.61
 96.84,15.54
 97.89,14.11
-Tabela,4342.03
+Tabela,
+Área,4342.03
 Revocação,Precisão
 0.00,100.00
 10.00,66.67
@@ -3628,12 +3864,15 @@ Revocação,Precisão
 80.00,20.71
 90.00,17.77
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,59
-
-Pontos
+Qtd Rel,145
+Qtd Rec,877
+Qtd Rec Rel,125
+Pontos,
+Área,2090.16
 Revocação,Precisão
 0.69,50.00
 1.38,66.67
@@ -3760,7 +3999,8 @@ Revocação,Precisão
 84.83,14.37
 85.52,14.29
 86.21,14.38
-Tabela,1931.23
+Tabela,
+Área,1931.23
 Revocação,Precisão
 0.00,50.00
 10.00,42.86
@@ -3773,12 +4013,15 @@ Revocação,Precisão
 80.00,14.87
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,60
-
-Pontos
+Qtd Rel,34
+Qtd Rec,383
+Qtd Rec Rel,27
+Pontos,
+Área,1563.59
 Revocação,Precisão
 2.94,50.00
 5.88,66.67
@@ -3807,7 +4050,8 @@ Revocação,Precisão
 73.53,7.08
 76.47,7.20
 79.41,7.22
-Tabela,1354.15
+Tabela,
+Área,1354.15
 Revocação,Precisão
 0.00,50.00
 10.00,36.36
@@ -3820,12 +4064,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,61
-
-Pontos
+Qtd Rel,70
+Qtd Rec,922
+Qtd Rec Rel,60
+Pontos,
+Área,3244.93
 Revocação,Precisão
 1.43,100.00
 2.86,100.00
@@ -3887,7 +4134,8 @@ Revocação,Precisão
 82.86,6.44
 84.29,6.48
 85.71,6.54
-Tabela,3205.08
+Tabela,
+Área,3205.08
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -3900,12 +4148,15 @@ Revocação,Precisão
 80.00,6.39
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,62
-
-Pontos
+Qtd Rel,144
+Qtd Rec,1062
+Qtd Rec Rel,140
+Pontos,
+Área,3340.11
 Revocação,Precisão
 0.69,100.00
 1.39,50.00
@@ -4047,7 +4298,8 @@ Revocação,Precisão
 95.83,14.14
 96.53,14.07
 97.22,14.14
-Tabela,3364.85
+Tabela,
+Área,3364.85
 Revocação,Precisão
 0.00,100.00
 10.00,55.56
@@ -4060,12 +4312,15 @@ Revocação,Precisão
 80.00,19.83
 90.00,15.74
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,63
-
-Pontos
+Qtd Rel,39
+Qtd Rec,874
+Qtd Rec Rel,31
+Pontos,
+Área,1448.79
 Revocação,Precisão
 2.56,100.00
 5.13,50.00
@@ -4098,7 +4353,8 @@ Revocação,Precisão
 74.36,4.52
 76.92,3.92
 79.49,3.71
-Tabela,1472.00
+Tabela,
+Área,1472.00
 Revocação,Precisão
 0.00,100.00
 10.00,40.00
@@ -4111,12 +4367,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,64
-
-Pontos
+Qtd Rel,50
+Qtd Rec,988
+Qtd Rec Rel,49
+Pontos,
+Área,2561.90
 Revocação,Precisão
 2.00,100.00
 4.00,66.67
@@ -4167,7 +4426,8 @@ Revocação,Precisão
 94.00,5.89
 96.00,5.90
 98.00,5.21
-Tabela,2567.24
+Tabela,
+Área,2567.24
 Revocação,Precisão
 0.00,100.00
 10.00,55.56
@@ -4180,12 +4440,15 @@ Revocação,Precisão
 80.00,8.79
 90.00,6.46
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,65
-
-Pontos
+Qtd Rel,94
+Qtd Rec,947
+Qtd Rec Rel,90
+Pontos,
+Área,3793.26
 Revocação,Precisão
 1.06,50.00
 2.13,66.67
@@ -4277,7 +4540,8 @@ Revocação,Precisão
 93.62,10.17
 94.68,9.56
 95.74,9.66
-Tabela,3697.39
+Tabela,
+Área,3697.39
 Revocação,Precisão
 0.00,50.00
 10.00,66.67
@@ -4290,12 +4554,15 @@ Revocação,Precisão
 80.00,17.84
 90.00,10.88
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,66
-
-Pontos
+Qtd Rel,63
+Qtd Rec,1035
+Qtd Rec Rel,61
+Pontos,
+Área,2046.80
 Revocação,Precisão
 1.59,33.33
 3.17,40.00
@@ -4358,7 +4625,8 @@ Revocação,Precisão
 93.65,7.73
 95.24,6.34
 96.83,6.16
-Tabela,2127.84
+Tabela,
+Área,2127.84
 Revocação,Precisão
 0.00,33.33
 10.00,58.33
@@ -4371,12 +4639,15 @@ Revocação,Precisão
 80.00,9.07
 90.00,8.19
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,67
-
-Pontos
+Qtd Rel,14
+Qtd Rec,878
+Qtd Rec Rel,14
+Pontos,
+Área,3317.14
 Revocação,Precisão
 7.14,100.00
 14.29,50.00
@@ -4392,7 +4663,8 @@ Revocação,Precisão
 85.71,3.13
 92.86,2.30
 100.00,2.28
-Tabela,3146.42
+Tabela,
+Área,3146.42
 Revocação,Precisão
 0.00,100.00
 10.00,50.00
@@ -4405,12 +4677,15 @@ Revocação,Precisão
 80.00,3.13
 90.00,2.30
 100.00,2.28
-
-
-
+,
+,
+,
 Consulta Num,68
-
-Pontos
+Qtd Rel,45
+Qtd Rec,870
+Qtd Rec Rel,41
+Pontos,
+Área,2777.21
 Revocação,Precisão
 2.22,100.00
 4.44,100.00
@@ -4453,7 +4728,8 @@ Revocação,Precisão
 86.67,5.62
 88.89,5.08
 91.11,4.95
-Tabela,2530.27
+Tabela,
+Área,2530.27
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -4466,12 +4742,15 @@ Revocação,Precisão
 80.00,5.97
 90.00,4.95
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,69
-
-Pontos
+Qtd Rel,15
+Qtd Rec,842
+Qtd Rec Rel,12
+Pontos,
+Área,3985.92
 Revocação,Precisão
 6.67,100.00
 13.33,100.00
@@ -4485,7 +4764,8 @@ Revocação,Precisão
 66.67,4.59
 73.33,2.86
 80.00,1.84
-Tabela,3930.26
+Tabela,
+Área,3930.26
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -4498,12 +4778,15 @@ Revocação,Precisão
 80.00,1.84
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,70
-
-Pontos
+Qtd Rel,17
+Qtd Rec,855
+Qtd Rec Rel,17
+Pontos,
+Área,5000.74
 Revocação,Precisão
 5.88,100.00
 11.76,100.00
@@ -4522,7 +4805,8 @@ Revocação,Precisão
 88.24,12.00
 94.12,6.58
 100.00,5.12
-Tabela,5058.51
+Tabela,
+Área,5058.51
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -4535,12 +4819,15 @@ Revocação,Precisão
 80.00,15.91
 90.00,6.58
 100.00,5.12
-
-
-
+,
+,
+,
 Consulta Num,71
-
-Pontos
+Qtd Rel,6
+Qtd Rec,1239
+Qtd Rec Rel,6
+Pontos,
+Área,3277.75
 Revocação,Precisão
 16.67,100.00
 33.33,28.57
@@ -4548,7 +4835,8 @@ Revocação,Precisão
 66.67,7.27
 83.33,0.86
 100.00,0.64
-Tabela,2401.64
+Tabela,
+Área,2401.64
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -4561,12 +4849,15 @@ Revocação,Precisão
 80.00,0.86
 90.00,0.64
 100.00,0.64
-
-
-
+,
+,
+,
 Consulta Num,72
-
-Pontos
+Qtd Rel,13
+Qtd Rec,864
+Qtd Rec Rel,13
+Pontos,
+Área,4882.76
 Revocação,Precisão
 7.69,100.00
 15.38,66.67
@@ -4581,7 +4872,8 @@ Revocação,Precisão
 84.62,9.48
 92.31,9.60
 100.00,2.17
-Tabela,4647.85
+Tabela,
+Área,4647.85
 Revocação,Precisão
 0.00,100.00
 10.00,66.67
@@ -4594,12 +4886,15 @@ Revocação,Precisão
 80.00,9.48
 90.00,9.60
 100.00,2.17
-
-
-
+,
+,
+,
 Consulta Num,73
-
-Pontos
+Qtd Rel,18
+Qtd Rec,888
+Qtd Rec Rel,16
+Pontos,
+Área,4118.94
 Revocação,Precisão
 5.56,100.00
 11.11,100.00
@@ -4617,7 +4912,8 @@ Revocação,Precisão
 77.78,7.82
 83.33,3.76
 88.89,1.98
-Tabela,3657.13
+Tabela,
+Área,3657.13
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -4630,12 +4926,15 @@ Revocação,Precisão
 80.00,3.76
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,74
-
-Pontos
+Qtd Rel,7
+Qtd Rec,894
+Qtd Rec Rel,7
+Pontos,
+Área,4028.38
 Revocação,Precisão
 14.29,100.00
 28.57,100.00
@@ -4644,7 +4943,8 @@ Revocação,Precisão
 71.43,2.60
 85.71,1.73
 100.00,0.96
-Tabela,3161.78
+Tabela,
+Área,3161.78
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -4657,12 +4957,15 @@ Revocação,Precisão
 80.00,1.73
 90.00,0.96
 100.00,0.96
-
-
-
+,
+,
+,
 Consulta Num,75
-
-Pontos
+Qtd Rel,21
+Qtd Rec,934
+Qtd Rec Rel,21
+Pontos,
+Área,4055.82
 Revocação,Precisão
 4.76,100.00
 9.52,66.67
@@ -4685,7 +4988,8 @@ Revocação,Precisão
 90.48,6.51
 95.24,4.68
 100.00,2.66
-Tabela,3985.77
+Tabela,
+Área,3985.77
 Revocação,Precisão
 0.00,100.00
 10.00,75.00
@@ -4698,12 +5002,15 @@ Revocação,Precisão
 80.00,7.59
 90.00,6.51
 100.00,2.66
-
-
-
+,
+,
+,
 Consulta Num,76
-
-Pontos
+Qtd Rel,17
+Qtd Rec,964
+Qtd Rec Rel,14
+Pontos,
+Área,2182.93
 Revocação,Precisão
 5.88,100.00
 11.76,100.00
@@ -4719,7 +5026,8 @@ Revocação,Precisão
 70.59,1.94
 76.47,1.74
 82.35,1.70
-Tabela,2179.37
+Tabela,
+Área,2179.37
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -4732,12 +5040,15 @@ Revocação,Precisão
 80.00,1.70
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,77
-
-Pontos
+Qtd Rel,82
+Qtd Rec,966
+Qtd Rec Rel,71
+Pontos,
+Área,1755.62
 Revocação,Precisão
 1.22,50.00
 2.44,40.00
@@ -4810,7 +5121,8 @@ Revocação,Precisão
 84.15,7.57
 85.37,7.49
 86.59,7.48
-Tabela,1698.14
+Tabela,
+Área,1698.14
 Revocação,Precisão
 0.00,50.00
 10.00,39.13
@@ -4823,12 +5135,15 @@ Revocação,Precisão
 80.00,8.17
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,78
-
-Pontos
+Qtd Rel,77
+Qtd Rec,973
+Qtd Rec Rel,76
+Pontos,
+Área,4639.77
 Revocação,Precisão
 1.30,100.00
 2.60,100.00
@@ -4906,7 +5221,8 @@ Revocação,Precisão
 96.10,9.32
 97.40,8.39
 98.70,8.09
-Tabela,4637.05
+Tabela,
+Área,4637.05
 Revocação,Precisão
 0.00,100.00
 10.00,80.00
@@ -4919,12 +5235,15 @@ Revocação,Precisão
 80.00,18.51
 90.00,9.27
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,79
-
-Pontos
+Qtd Rel,43
+Qtd Rec,885
+Qtd Rec Rel,40
+Pontos,
+Área,2360.21
 Revocação,Precisão
 2.33,100.00
 4.65,33.33
@@ -4966,7 +5285,8 @@ Revocação,Precisão
 88.37,7.00
 90.70,6.81
 93.02,4.85
-Tabela,2415.72
+Tabela,
+Área,2415.72
 Revocação,Precisão
 0.00,100.00
 10.00,33.33
@@ -4979,12 +5299,15 @@ Revocação,Precisão
 80.00,8.31
 90.00,6.81
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,80
-
-Pontos
+Qtd Rel,34
+Qtd Rec,408
+Qtd Rec Rel,27
+Pontos,
+Área,3552.20
 Revocação,Precisão
 2.94,100.00
 5.88,66.67
@@ -5013,7 +5336,8 @@ Revocação,Precisão
 73.53,7.35
 76.47,7.58
 79.41,6.89
-Tabela,3255.09
+Tabela,
+Área,3255.09
 Revocação,Precisão
 0.00,100.00
 10.00,57.14
@@ -5026,12 +5350,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,81
-
-Pontos
+Qtd Rel,28
+Qtd Rec,908
+Qtd Rec Rel,27
+Pontos,
+Área,3274.94
 Revocação,Precisão
 3.57,100.00
 7.14,100.00
@@ -5060,7 +5387,8 @@ Revocação,Precisão
 89.29,3.33
 92.86,3.30
 96.43,3.05
-Tabela,3055.89
+Tabela,
+Área,3055.89
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -5073,12 +5401,15 @@ Revocação,Precisão
 80.00,3.14
 90.00,3.30
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,82
-
-Pontos
+Qtd Rel,62
+Qtd Rec,1050
+Qtd Rec Rel,59
+Pontos,
+Área,3465.82
 Revocação,Precisão
 1.61,100.00
 3.23,100.00
@@ -5139,7 +5470,8 @@ Revocação,Precisão
 91.94,8.84
 93.55,8.54
 95.16,7.10
-Tabela,3497.89
+Tabela,
+Área,3497.89
 Revocação,Precisão
 0.00,100.00
 10.00,70.00
@@ -5152,12 +5484,15 @@ Revocação,Precisão
 80.00,14.66
 90.00,9.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,83
-
-Pontos
+Qtd Rel,32
+Qtd Rec,1045
+Qtd Rec Rel,32
+Pontos,
+Área,2840.98
 Revocação,Precisão
 3.13,100.00
 6.25,66.67
@@ -5191,7 +5526,8 @@ Revocação,Precisão
 93.75,4.07
 96.88,3.13
 100.00,3.12
-Tabela,3048.18
+Tabela,
+Área,3048.18
 Revocação,Precisão
 0.00,100.00
 10.00,66.67
@@ -5204,12 +5540,15 @@ Revocação,Precisão
 80.00,5.84
 90.00,4.39
 100.00,3.12
-
-
-
+,
+,
+,
 Consulta Num,84
-
-Pontos
+Qtd Rel,16
+Qtd Rec,829
+Qtd Rec Rel,15
+Pontos,
+Área,4486.21
 Revocação,Precisão
 6.25,50.00
 12.50,66.67
@@ -5226,7 +5565,8 @@ Revocação,Precisão
 81.25,4.10
 87.50,4.28
 93.75,2.68
-Tabela,4353.11
+Tabela,
+Área,4353.11
 Revocação,Precisão
 0.00,50.00
 10.00,66.67
@@ -5239,12 +5579,15 @@ Revocação,Precisão
 80.00,4.10
 90.00,2.68
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,85
-
-Pontos
+Qtd Rel,31
+Qtd Rec,957
+Qtd Rec Rel,28
+Pontos,
+Área,1284.54
 Revocação,Precisão
 3.23,50.00
 6.45,40.00
@@ -5274,7 +5617,8 @@ Revocação,Precisão
 83.87,3.41
 87.10,3.17
 90.32,2.97
-Tabela,1220.44
+Tabela,
+Área,1220.44
 Revocação,Precisão
 0.00,50.00
 10.00,30.77
@@ -5287,12 +5631,15 @@ Revocação,Precisão
 80.00,5.46
 90.00,2.97
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,86
-
-Pontos
+Qtd Rel,47
+Qtd Rec,1050
+Qtd Rec Rel,46
+Pontos,
+Área,2932.36
 Revocação,Precisão
 2.13,33.33
 4.26,50.00
@@ -5340,7 +5687,8 @@ Revocação,Precisão
 93.62,6.97
 95.74,6.58
 97.87,4.68
-Tabela,2817.78
+Tabela,
+Área,2817.78
 Revocação,Precisão
 0.00,33.33
 10.00,41.67
@@ -5353,12 +5701,15 @@ Revocação,Precisão
 80.00,18.10
 90.00,9.56
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,87
-
-Pontos
+Qtd Rel,38
+Qtd Rec,1045
+Qtd Rec Rel,37
+Pontos,
+Área,1042.76
 Revocação,Precisão
 2.63,20.00
 5.26,25.00
@@ -5397,7 +5748,8 @@ Revocação,Precisão
 92.11,4.89
 94.74,4.86
 97.37,4.26
-Tabela,987.26
+Tabela,
+Área,987.26
 Revocação,Precisão
 0.00,20.00
 10.00,20.00
@@ -5410,12 +5762,15 @@ Revocação,Precisão
 80.00,5.75
 90.00,4.89
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,88
-
-Pontos
+Qtd Rel,14
+Qtd Rec,1044
+Qtd Rec Rel,14
+Pontos,
+Área,1495.18
 Revocação,Precisão
 7.14,33.33
 14.29,33.33
@@ -5431,7 +5786,8 @@ Revocação,Precisão
 85.71,4.56
 92.86,2.79
 100.00,2.45
-Tabela,1605.30
+Tabela,
+Área,1605.30
 Revocação,Precisão
 0.00,33.33
 10.00,33.33
@@ -5444,12 +5800,15 @@ Revocação,Precisão
 80.00,4.56
 90.00,2.79
 100.00,2.45
-
-
-
+,
+,
+,
 Consulta Num,89
-
-Pontos
+Qtd Rel,17
+Qtd Rec,921
+Qtd Rec Rel,17
+Pontos,
+Área,5098.62
 Revocação,Precisão
 5.88,100.00
 11.76,100.00
@@ -5468,7 +5827,8 @@ Revocação,Precisão
 88.24,3.44
 94.12,3.29
 100.00,2.15
-Tabela,4983.94
+Tabela,
+Área,4983.94
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -5481,12 +5841,15 @@ Revocação,Precisão
 80.00,25.00
 90.00,3.29
 100.00,2.15
-
-
-
+,
+,
+,
 Consulta Num,90
-
-Pontos
+Qtd Rel,28
+Qtd Rec,962
+Qtd Rec Rel,27
+Pontos,
+Área,6385.72
 Revocação,Precisão
 3.57,100.00
 7.14,100.00
@@ -5515,7 +5878,8 @@ Revocação,Precisão
 89.29,6.19
 92.86,5.35
 96.43,5.48
-Tabela,6130.14
+Tabela,
+Área,6130.14
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -5528,12 +5892,15 @@ Revocação,Precisão
 80.00,31.94
 90.00,5.35
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,91
-
-Pontos
+Qtd Rel,304
+Qtd Rec,751
+Qtd Rec Rel,214
+Pontos,
+Área,2881.49
 Revocação,Precisão
 0.33,100.00
 0.66,100.00
@@ -5749,7 +6116,8 @@ Revocação,Precisão
 69.74,29.08
 70.07,29.18
 70.39,29.12
-Tabela,2699.76
+Tabela,
+Área,2699.76
 Revocação,Precisão
 0.00,100.00
 10.00,42.47
@@ -5762,12 +6130,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,92
-
-Pontos
+Qtd Rel,108
+Qtd Rec,910
+Qtd Rec Rel,94
+Pontos,
+Área,3646.43
 Revocação,Precisão
 0.93,100.00
 1.85,100.00
@@ -5863,7 +6234,8 @@ Revocação,Precisão
 85.19,10.77
 86.11,10.64
 87.04,10.61
-Tabela,3516.07
+Tabela,
+Área,3516.07
 Revocação,Precisão
 0.00,100.00
 10.00,84.62
@@ -5876,12 +6248,15 @@ Revocação,Precisão
 80.00,11.08
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,93
-
-Pontos
+Qtd Rel,18
+Qtd Rec,940
+Qtd Rec Rel,15
+Pontos,
+Área,2200.38
 Revocação,Precisão
 5.56,100.00
 11.11,100.00
@@ -5898,7 +6273,8 @@ Revocação,Precisão
 72.22,3.34
 77.78,2.21
 83.33,2.01
-Tabela,2186.77
+Tabela,
+Área,2186.77
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -5911,12 +6287,15 @@ Revocação,Precisão
 80.00,2.01
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,94
-
-Pontos
+Qtd Rel,43
+Qtd Rec,363
+Qtd Rec Rel,35
+Pontos,
+Área,5264.02
 Revocação,Precisão
 2.33,100.00
 4.65,100.00
@@ -5953,7 +6332,8 @@ Revocação,Precisão
 76.74,17.28
 79.07,17.71
 81.40,13.83
-Tabela,5058.08
+Tabela,
+Área,5058.08
 Revocação,Precisão
 0.00,100.00
 10.00,83.33
@@ -5966,12 +6346,15 @@ Revocação,Precisão
 80.00,13.83
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,95
-
-Pontos
+Qtd Rel,9
+Qtd Rec,932
+Qtd Rec Rel,7
+Pontos,
+Área,3329.82
 Revocação,Precisão
 11.11,100.00
 22.22,100.00
@@ -5980,7 +6363,8 @@ Revocação,Precisão
 55.56,1.81
 66.67,1.29
 77.78,1.22
-Tabela,2990.74
+Tabela,
+Área,2990.74
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -5993,12 +6377,15 @@ Revocação,Precisão
 80.00,0.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,96
-
-Pontos
+Qtd Rel,12
+Qtd Rec,1074
+Qtd Rec Rel,10
+Pontos,
+Área,2945.23
 Revocação,Precisão
 8.33,100.00
 16.67,100.00
@@ -6010,7 +6397,8 @@ Revocação,Precisão
 66.67,6.15
 75.00,1.49
 83.33,1.00
-Tabela,2464.47
+Tabela,
+Área,2464.47
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -6023,12 +6411,15 @@ Revocação,Precisão
 80.00,1.00
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,97
-
-Pontos
+Qtd Rel,11
+Qtd Rec,977
+Qtd Rec Rel,11
+Pontos,
+Área,3130.72
 Revocação,Precisão
 9.09,50.00
 18.18,66.67
@@ -6041,7 +6432,8 @@ Revocação,Precisão
 81.82,6.25
 90.91,2.58
 100.00,1.23
-Tabela,3011.62
+Tabela,
+Área,3011.62
 Revocação,Precisão
 0.00,50.00
 10.00,66.67
@@ -6054,12 +6446,15 @@ Revocação,Precisão
 80.00,6.25
 90.00,2.58
 100.00,1.23
-
-
-
+,
+,
+,
 Consulta Num,98
-
-Pontos
+Qtd Rel,15
+Qtd Rec,605
+Qtd Rec Rel,12
+Pontos,
+Área,2702.36
 Revocação,Precisão
 6.67,100.00
 13.33,100.00
@@ -6073,7 +6468,8 @@ Revocação,Precisão
 66.67,1.81
 73.33,1.94
 80.00,2.03
-Tabela,2757.68
+Tabela,
+Área,2757.68
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -6086,19 +6482,23 @@ Revocação,Precisão
 80.00,2.03
 90.00,0.00
 100.00,0.00
-
-
-
+,
+,
+,
 Consulta Num,99
-
-Pontos
+Qtd Rel,5
+Qtd Rec,875
+Qtd Rec Rel,5
+Pontos,
+Área,7929.82
 Revocação,Precisão
 20.00,100.00
 40.00,100.00
 60.00,100.00
 80.00,50.00
 100.00,1.75
-Tabela,7526.32
+Tabela,
+Área,7526.32
 Revocação,Precisão
 0.00,100.00
 10.00,100.00
@@ -6111,12 +6511,15 @@ Revocação,Precisão
 80.00,50.00
 90.00,1.75
 100.00,1.75
-
-
-
+,
+,
+,
 Consulta Num,100
-
-Pontos
+Qtd Rel,11
+Qtd Rec,868
+Qtd Rec Rel,10
+Pontos,
+Área,4301.38
 Revocação,Precisão
 9.09,100.00
 18.18,100.00
@@ -6128,7 +6531,8 @@ Revocação,Precisão
 72.73,1.52
 81.82,1.67
 90.91,1.59
-Tabela,3731.52
+Tabela,
+Área,3731.52
 Revocação,Precisão
 0.00,100.00
 10.00,100.00

@@ -20,8 +20,10 @@ def proximosPontos(arquivo):
 	revocacao = [];
 	precisao = [];
 	linha = arquivo.readline()[:-1];
-	while linha:
+	while linha != ",":
 		tokens = linha.split(",");
+		if tokens[0] == "Tabela" or tokens[0] == "Total rel":
+			break;
 		revocacao.append(float(tokens[0]));
 		precisao.append(float(tokens[1]));
 		linha = arquivo.readline()[:-1];
@@ -197,15 +199,15 @@ def main(argv):
 		criarDiretorio(diretorioStr + "svg/titulo/");
 
 	arquivo = open(arqResultadosStr, 'r');
-	pularLinhas(arquivo, 2);
+	pularLinhas(arquivo, 3);
 	pontos = proximosPontos(arquivo);
 	if arqResultadosStr2 != '':
 		arquivo2 = open(arqResultadosStr2, 'r');
-		pularLinhas(arquivo2, 2);
+		pularLinhas(arquivo2, 3);
 		pontos2 = proximosPontos(arquivo2);
 	if arqResultadosStr3 != '':
 		arquivo3 = open(arqResultadosStr3, 'r');
-		pularLinhas(arquivo3, 2);
+		pularLinhas(arquivo3, 3);
 		pontos3 = proximosPontos(arquivo3);
 
 
@@ -235,18 +237,19 @@ def main(argv):
 	criarDiretorio(diretorioStr + "svg/titulo/");
 
 	MAX_CONSULTAS = 100;
+	pularLinhas(arquivo, 3);
 	for idConsulta in range(1, MAX_CONSULTAS + 1):
-		pularLinhas(arquivo, 6);
+		pularLinhas(arquivo, 9);
 		pontos = proximosPontos(arquivo);
 		idConsultaStr = str(idConsulta);
-		titulo = titulo + " - " + idConsultaStr + " - Pontos";
+		titulo = tituloGraf + " - Cons " + idConsultaStr + " - Pontos";
 		grafico = arqNome + "_cons"+ idConsultaStr + "_pontos";
-		plotGrafico(diretorioStr, tituloGraf, grafico, pontos);
+		plotGrafico(diretorioStr, titulo, grafico, pontos);
 
 		pularLinhas(arquivo, 2);
 		pontos = proximosPontos(arquivo);
-		titulo = tituloGraf + " - " + idConsultaStr + " - 11 níveis";
-		grafico = arqNome + "_cons"+ idConsultaStr + "_11niveis";
+		titulo = tituloGraf + "- Cons " + idConsultaStr + " - 11 níveis";
+		grafico = arqNome + "_cons"+ idConsultaStr + "_tabela";
 		plotGrafico(diretorioStr, titulo, grafico, pontos)
 
 

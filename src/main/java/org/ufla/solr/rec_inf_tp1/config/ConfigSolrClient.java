@@ -20,7 +20,7 @@ import org.apache.solr.common.cloud.SolrZkClient;
 public class ConfigSolrClient {
 
 	/**
-	 * Única instância de ConfigSolrClient da aplicação (Singleton)
+	 * Única instância de ConfigSolrClient da aplicação (Singleton).
 	 */
 	private static ConfigSolrClient configSolrClient;
 
@@ -81,12 +81,12 @@ public class ConfigSolrClient {
 	private String tituloGrafico;
 
 	/**
-	 * Valor sim do pré-processamento
+	 * Valor sim do pré-processamento.
 	 */
 	private static final String PRE_PROCESSAMENTO_SIM = "SIM";
 
 	/**
-	 * Construtor privado para implementação do padrão Singleton
+	 * Construtor privado para implementação do padrão Singleton.
 	 */
 	private ConfigSolrClient() {
 

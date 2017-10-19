@@ -113,3 +113,16 @@ python3 gerarGraficos.py -r "/home/carlos/workspaces/solr/RecuperacaoInformacaoT
 
 python3 gerarGraficos.py -r "/home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/bm25_preproc_no_filters.csv" -m "simples" -t "Modelo BM25" --resultado2 "/home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/vet_preproc_no_filters.csv" --tituloGrafico2 "Modelo Vetorial" --titulo_geral "Comparação de modelos" --arquivo_saida "/home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/resumo/compModelos"
 
+
+
+#Testes
+
+python3 gerarGraficos.py -r "/home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/teste/vet_no_filters.csv" -m "simples" -t "Sem pré-processamento/filtros"
+
+
+java -jar recInfTP1.jar -cmd consultasERelatorio -host localhost -p 8983 -c cfc_bm25_no_filters -bd /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/cfc -out /home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/teste/bm25_preproc_no_filters.csv -preproc sim -titgraf "Modelo BM25 - com pré-processamento"
+
+python3 gerarGraficos.py -r "/home/carlos/workspaces/solr/RecuperacaoInformacaoTP1/resultados/teste/bm25_preproc_no_filters.csv" -m "completo" -t "Sem pré-processamento/filtros"
+
+
+

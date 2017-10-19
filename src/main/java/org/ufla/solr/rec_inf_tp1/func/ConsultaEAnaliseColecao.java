@@ -92,7 +92,7 @@ public class ConsultaEAnaliseColecao {
 	 * @return lista com identificadores dos documentos recuperados pela
 	 *         consulta.
 	 */
-	private List<Integer> consultar(SolrClient solr, Consulta consulta) {
+	public List<Integer> consultar(SolrClient solr, Consulta consulta) {
 		SolrQuery solrQuery = new SolrQuery();
 		solrQuery.setStart(ROWS_START).setRows(ROWS_VALOR).setSort(SortClause.desc(SORT_ITEM))
 				.setFields(FIELD_LIST_ITEM)
@@ -143,7 +143,7 @@ public class ConsultaEAnaliseColecao {
 			List<Integer> documentosRecuperados = consultar(solr, consulta);
 			MetricaPrecisaoRevocacao metrica = new MetricaPrecisaoRevocacao(consulta.getDocumentosRelevantes(),
 					documentosRecuperados);
-			ResultadoConsulta resultadoConsulta = new ResultadoConsulta(metrica, consulta);
+			ResultadoConsulta resultadoConsulta = new ResultadoConsulta(metrica, consulta, documentosRecuperados.size());
 			relatorio.addResultado(resultadoConsulta);
 		}
 
